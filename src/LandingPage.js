@@ -5,7 +5,7 @@ import Main from "./components/Landingpage/Main";
 
 function LandingPage() {
   return (
-    <div>
+    <div className="overflow-hidden">
       <Nav />
       <Hero />
       <Main />

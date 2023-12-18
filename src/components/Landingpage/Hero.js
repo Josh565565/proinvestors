@@ -7,7 +7,7 @@ import Nav from "./Nav";
 
 function Hero() {
   return (
-    <div>
+    <div className="overflow-hidden">
       {/* <Nav /> */}
       <div className="bg-hero-bg bg-primary bg-[length:400px] lg:h-[500px] md:h-[420px] bg-no-repeat bg-right-bottom px-[6%] md:bg-[length:400px] lg:bg-[length:500px]">
         <div className="md:flex gap-16 justify-between items-center pt-6">

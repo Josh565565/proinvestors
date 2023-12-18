@@ -17,8 +17,8 @@ import Robert from "./images/robert.svg";
 
 function Main() {
   return (
-    <div>
-      <div className="flex justify-evenly pt-5">
+    <div className=" overflow-hidden">
+      <div className="flex justify-evenly pt-5 overflow-hidden">
         <div>
           <p className="text-2xl font-bold text-secondary md:text-3xl">200+</p>
           <p className="text-[#222222] text-[0.8125rem] md:text-[1rem]">
@@ -44,14 +44,14 @@ function Main() {
         </div>
       </div>
       <div>
-        <div className="flex gap-5 items-center justify-between mt-12">
+        <div className="flex gap-5 items-center justify-between mt-12 overflow-hidden">
           <img
             src={MAIN1}
             alt="Side image 1"
-            className="w-[214px] sm:w-[314px] md:w-[325px]"
+            className="w-[214px] sm:w-[314px] md:w-[325px] overflow-hidden"
           />
           <div>
-            <p className="flex items-center justify-center rounded-full bg-primary text-white w-10 h-10 ">
+            <p className="flex items-center justify-center rounded-full bg-primary text-white w-10 h-10 overflow-hidden">
               1
             </p>
             <p className="text-xs w-[90%] capitalize md:text-sm">
@@ -64,7 +64,7 @@ function Main() {
           <img
             src={MAIN2}
             alt="Side image 1"
-            className="w-[214px] sm:w-[314px] md:w-[325px]"
+            className="w-[214px] sm:w-[314px] md:w-[325px] overflow-hidden"
           />
           <div className="pl-5">
             <p className="flex items-center justify-center rounded-full bg-primary text-white w-10 h-10 ">
@@ -79,7 +79,7 @@ function Main() {
         <div className=" mt-12 relative">
           <div className="flex flex-col items-end absolute right-10">
             <div className="flex flex-col">
-              <p className="flex items-center justify-center rounded-full bg-primary text-white w-10 h-10 ">
+              <p className="flex items-center justify-center rounded-full bg-primary text-white w-10 h-10 overflow-hidden">
                 3
               </p>
               <p className="text-xs capitalize md:text-sm md:pr-32">
@@ -87,10 +87,10 @@ function Main() {
               </p>
             </div>
           </div>
-          <img src={MAIN3} alt="Side image 1" className="" />
+          <img src={MAIN3} alt="Side image 1" className="overflow-hidden" />
         </div>
       </div>
-      <div className="flex flex-col items-center mt-20 md:flex-row md:justify-center md:gap-2">
+      <div className="flex flex-col items-center mt-20 md:flex-row md:justify-center md:gap-2 overflow-hidden">
         <div>
           <div className="">
             <p className="text-b text-lg">Why Choose Us</p>
@@ -99,7 +99,7 @@ function Main() {
             </h3>
           </div>
           <div className="flex gap-4 mt-5">
-            <img src={INFO1} alt="" className="w-16" />
+            <img src={INFO1} alt="" className="w-16 overflow-hidden" />
             <div className="">
               <h3 className="text-b text-base font-bold">
                 Accurate Information
