@@ -7,12 +7,19 @@ import { fab } from "@fortawesome/free-brands-svg-icons";
 
 import LandingPage from "./LandingPage";
 import Nav from "./components/Landingpage/Nav";
+import DropdownMenu from "./components/Landingpage/DropdownMenu";
+import Hero from "./components/Landingpage/Hero";
+import Main from "./components/Landingpage/Main";
 
 function App() {
   return (
     <div>
       {/* <LandingPage /> */}
-      <Nav />
+      {/* <Nav /> */}
+      {/* <DropdownMenu /> */}
+      {/* <Hero /> */}
+      {/* <Main /> */}
+      <LandingPage />
     </div>
   );
 }

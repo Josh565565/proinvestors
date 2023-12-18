@@ -5,6 +5,11 @@ module.exports = {
     extend: {
       colors: {
         primary: "#01257D",
+        secondary: "#00FFFF",
+        b: "#22222",
+      },
+      backgroundImage: {
+        "hero-bg": "url('/src/components/Landingpage/images/bg.svg')",
       },
     },
   },

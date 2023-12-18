@@ -1,11 +1,14 @@
 import React from "react";
+import Nav from "./components/Landingpage/Nav";
+import Hero from "./components/Landingpage/Hero";
+import Main from "./components/Landingpage/Main";
 
 function LandingPage() {
   return (
     <div>
-      <h1 className="flex items-center justify-center font-bold w-full h-96 bg-red-400">
-        Home
-      </h1>
+      <Nav />
+      <Hero />
+      <Main />
     </div>
   );
 }
