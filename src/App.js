@@ -10,6 +10,7 @@ import Nav from "./components/Landingpage/Nav";
 import DropdownMenu from "./components/Landingpage/DropdownMenu";
 import Hero from "./components/Landingpage/Hero";
 import Main from "./components/Landingpage/Main";
+import Footer from "./components/Landingpage/Footer";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
       {/* <Hero /> */}
       {/* <Main /> */}
       <LandingPage />
+      {/* <Footer /> */}
     </div>
   );
 }
