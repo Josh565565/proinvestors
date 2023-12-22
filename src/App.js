@@ -11,6 +11,9 @@ import DropdownMenu from "./components/Landingpage/DropdownMenu";
 import Hero from "./components/Landingpage/Hero";
 import Main from "./components/Landingpage/Main";
 import Footer from "./components/Landingpage/Footer";
+import SecondNav from "./components/businessOwners/SecondNav";
+import Owners from "./components/businessOwners/Owners";
+import Investors from "./components/investors/Investors";
 
 function App() {
   return (
@@ -20,8 +23,11 @@ function App() {
       {/* <DropdownMenu /> */}
       {/* <Hero /> */}
       {/* <Main /> */}
-      <LandingPage />
+      {/* <LandingPage /> */}
       {/* <Footer /> */}
+      {/* <SecondNav /> */}
+      {/* <Owners /> */}
+      <Investors />
     </div>
   );
 }

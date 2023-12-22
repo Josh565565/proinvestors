@@ -6,7 +6,7 @@ module.exports = {
       colors: {
         primary: "#01257D",
         secondary: "#00FFFF",
-        b: "#22222",
+        b: "#222222",
       },
       backgroundImage: {
         "hero-bg": "url('/src/components/Landingpage/images/bg.svg')",
