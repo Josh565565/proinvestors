@@ -4,6 +4,13 @@ import { far } from "@fortawesome/free-regular-svg-icons";
 import { fab } from "@fortawesome/free-brands-svg-icons";
 
 // library.add(fas, far, fab);
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  Navigate,
+  Outlet,
+} from "react-router-dom";
 
 import LandingPage from "./LandingPage";
 import Nav from "./components/Landingpage/Nav";
@@ -18,25 +25,21 @@ import ThirdNav from "./components/businessOpportunity/ThirdNav";
 import BusinessOpportunity from "./components/businessOpportunity/BusinessOpportunity";
 import AboutUs from "./components/aboutUs/AboutUs";
 import Newsletter from "./components/Landingpage/Newsletter";
+import SignUp from "./components/Auth/SignUp";
+import SignIn from "./components/Auth/SignIn";
 
 function App() {
   return (
-    <div>
-      {/* <LandingPage /> */}
-      {/* <Nav /> */}
-      {/* <DropdownMenu /> */}
-      {/* <Hero /> */}
-      {/* <Main /> */}
-      {/* <LandingPage /> */}
-      {/* <Footer /> */}
-      {/* <SecondNav /> */}
-      {/* <Owners /> */}
-      {/* <Investors /> */}
-      {/* <ThirdNav /> */}
-      {/* <BusinessOpportunity /> */}
-      <AboutUs />
-      {/* <Newsletter /> */}
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<Outlet />}>
+          <Route index element={<LandingPage />} />
+          <Route path="/owners" element={<Owners />} />
+          <Route path="/investors" element={<Investors />} />
+          <Route path="/aboutus" element={<AboutUs />} />
+        </Route>
+      </Routes>
+    </Router>
   );
 }
 

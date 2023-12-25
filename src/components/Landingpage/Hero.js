@@ -1,4 +1,7 @@
-import React from "react";
+import React, { useState } from "react";
+
+import SignUp from "../Auth/SignUp";
+import SignIn from "../Auth/SignIn";
 
 // Images import
 import BG from "./images/bg-img.svg";
@@ -6,8 +9,35 @@ import BGM from "./images/bg-img-m.svg";
 import Nav from "./Nav";
 
 function Hero() {
+  const [signUpOpen, setSignUpOpen] = useState(false);
+  const [signInOpen, setSignInOpen] = useState(false);
+
+  const toggleSignUp = () => {
+    setSignUpOpen(!signUpOpen);
+  };
+  const toggleSignIn = () => {
+    setSignInOpen(!signInOpen);
+  };
   return (
     <div className="overflow-hidden">
+      {signUpOpen && (
+        <div
+          className="fixed top-0 left-0 w-[100%] h-[100%] bg-gradient-to-b from-opacity-90 to-opacity-90 via-transparent from-gray-200 to-gray-200"
+          onClick={toggleSignUp}
+        />
+      )}
+      {signInOpen && (
+        <div
+          className="fixed top-0 left-0 w-[100%] h-[100%] bg-white opacity-80   via-transparent from-gray-100 to-gray-100"
+          onClick={toggleSignIn}
+        />
+      )}
+      <div className="flex flex-col items-center">
+        {signUpOpen && <SignUp close={toggleSignUp} open={toggleSignIn} />}
+      </div>
+      <div className="flex flex-col items-center">
+        {signInOpen && <SignIn close={toggleSignIn} open={toggleSignUp} />}
+      </div>
       {/* <Nav /> */}
       <div className="bg-hero-bg bg-primary bg-[length:400px] lg:h-[500px] md:h-[420px] bg-no-repeat bg-right-bottom px-[6%] md:bg-[length:400px] lg:bg-[length:500px]">
         <div className="md:flex gap-16 justify-between items-center pt-6">
@@ -23,13 +53,22 @@ function Hero() {
               opportunities, Build connections and promote success.
             </p>
             <div className="flex gap-5 mt-10">
-              <button className=" bg-secondary w-[170px] h-[40px] rounded md:hidden">
+              <button
+                onClick={toggleSignUp}
+                className=" bg-secondary w-[170px] h-[40px] rounded md:hidden"
+              >
                 Get started
               </button>
-              <button className="hidden bg-secondary md:w-[160px] md:h-[55px] lg:w-[250px] lg:h-[57px] lg:text-xl rounded md:block">
+              <button
+                onClick={toggleSignUp}
+                className="hidden bg-secondary md:w-[160px] md:h-[55px] lg:w-[250px] lg:h-[57px] lg:text-xl rounded md:block"
+              >
                 Sign up
               </button>
-              <button className="hidden text-xl rounded text=[#D9D9D9] border-2 border-[#737373] text-[#D9D9D9] md:w-[160px] md:h-[55px] lg:w-[250px] lg:h-[57px] md:block">
+              <button
+                onClick={toggleSignIn}
+                className="hidden text-xl rounded text=[#D9D9D9] border-2 border-[#737373] text-[#D9D9D9] md:w-[160px] md:h-[55px] lg:w-[250px] lg:h-[57px] md:block"
+              >
                 Login
               </button>
             </div>

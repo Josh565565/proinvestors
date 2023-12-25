@@ -18,7 +18,7 @@ import Newsletter from "./Newsletter";
 
 function Main() {
   return (
-    <div className=" overflow-hidden">
+    <div className="overflow-hidden">
       <div className="flex justify-evenly pt-20 overflow-hidden">
         <div className="xl:flex xl:flex-col xl:items-center">
           <p className="text-2xl font-bold text-secondary md:text-3xl xl:text-6xl">
