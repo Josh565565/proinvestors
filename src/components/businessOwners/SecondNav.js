@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 // import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { Link } from "react-router-dom";
 
 // Images import
 import Logo from "../images/logo2.svg";
@@ -37,11 +38,15 @@ function SecondNav() {
     <div className="bg-white mt-5 lg:pl-8 lg:mt-0">
       <nav className="flex justify-between items-center lg:h-40">
         <div className="flex items-center">
-          <img src={Logo} alt="Logo Image" className="w-10 ml-4 lg:w-16" />
-          <p className=" text-xl text-b lg:text-[2rem]">
-            <span className="text-[#00FFFF] font-bold ">Pro</span>
-            Investors
-          </p>
+          <Link to="/">
+            <img src={Logo} alt="Logo Image" className="w-10 ml-4 lg:w-16" />
+          </Link>
+          <Link to="/">
+            <p className=" text-xl text-b lg:text-[2rem]">
+              <span className="text-[#00FFFF] font-bold ">Pro</span>
+              Investors
+            </p>
+          </Link>
         </div>
 
         <div className="flex items-center gap-9 mr-5 relative lg:hidden ">
@@ -62,6 +67,12 @@ function SecondNav() {
             <FontAwesomeIcon
               className="text-[#000] h-6"
               icon="fa-solid fa-bars"
+              onClick={toggleMenu}
+            />
+          )}
+          {openMenu && (
+            <div
+              className="fixed z-10 top-0 left-0 w-[100%] h-[100%] bg-b opacity-70   via-transparent from-gray-100 to-gray-100"
               onClick={toggleMenu}
             />
           )}

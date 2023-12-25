@@ -22,10 +22,10 @@ function SignIn(props) {
             className="hidden lg:block lg:w-[455px] lg:h-[900px] xl:w-[704px] xl:h-[1072px]"
           />
         </div>
-        <div className="bg-white p-5 mx-5 lg:mx-0 flex flex-col items-center lg:w-[455px] lg:h-[900px] xl:w-[704px] xl:h-[1072px] relative pt-10">
+        <div className="bg-white rounded lg:rounded-none p-5 mx-5 lg:mx-0 flex flex-col items-center lg:w-[455px] lg:h-[900px] xl:w-[704px] xl:h-[1072px] relative pt-10">
           <div
             onClick={props.close}
-            className="flex items-center justify-center w-[30px] h-[30px] lg:w-[40px] lg:h-[40px] rounded-full bg-secondary absolute right-0 mt-[-10px] mr-2 cursor-pointer"
+            className="flex items-center justify-center w-[30px] h-[30px] lg:w-[40px] lg:h-[40px] rounded-full bg-secondary absolute right-0 mt-[-30px] mr-2 cursor-pointer"
           >
             <FontAwesomeIcon
               className="text-[#000] h-6"
@@ -70,8 +70,8 @@ function SignIn(props) {
                 />
               </div>
               {/*  */}
-              <div className="ml-[100px] lg:ml-[200px] xl:ml-[360px] mt-3">
-                <p className=" text-right text-primary text-[1.5rem] font-Inter cursor-pointer">
+              <div className="ml-[170px] lg:ml-[200px] xl:ml-[360px] mt-3">
+                <p className=" text-right text-primary text-base lg:text-[1.5rem] font-Inter cursor-pointer">
                   Forgot password?
                 </p>
               </div>
@@ -90,24 +90,24 @@ function SignIn(props) {
                 </button>
               </div>
             </form>
-            <p className=" text-center mt-5 text-[#000] text-lg font-Roboto">
+            <p className="text-base text-center mt-5 text-[#000] lg:text-lg font-Roboto">
               Already have an account
               <span
                 onClick={() => {
                   props.close();
                   props.open();
                 }}
-                className="text-[1.375rem] text-secondary font-semibold font-Roboto ml-1 cursor-pointer"
+                className="text-base lg:text-[1.375rem] text-secondary font-semibold font-Roboto ml-1 cursor-pointer"
               >
                 Sign Up
               </span>
             </p>
-            <div className="flex items-center gap-2 justify-center mt-4">
+            <div className="flex items-center justify-center gap-2 mt-4">
               <input
                 type="checkbox"
-                className="w-[28px] h-[28px] bg-secondary"
+                className="w-[20px] h-[20px] lg:w-[28px] lg:h-[28px] bg-secondary"
               />{" "}
-              <p className="text-[#000] text-base lg:text-lg font-Roboto">
+              <p className="text-[#000] text-xs lg:text-lg font-Roboto">
                 I agree to{" "}
                 <span className="text-primary cursor-pointer">
                   {" "}

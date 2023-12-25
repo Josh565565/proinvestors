@@ -56,7 +56,7 @@ function Nav() {
         <div className=" mr-5 relative lg:hidden ">
           {showCloseMenu ? (
             <FontAwesomeIcon
-              className="text-[#fff] h-6"
+              className="text-[#fff] h-6 z-10"
               icon="fa-solid fa-close"
               onClick={toggleMenu}
             />

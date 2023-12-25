@@ -130,14 +130,14 @@ function SignUp(props) {
                 </button>
               </div>
             </form>
-            <p className=" text-center mt-5 text-[#000] text-lg font-Roboto">
+            <p className="text-base text-center mt-5 text-[#000] lg:text-lg font-Roboto">
               Already have an account
               <span
                 onClick={() => {
                   props.close();
                   props.open();
                 }}
-                className="text-[1.375rem] text-secondary font-semibold font-Roboto ml-1 cursor-pointer"
+                className="text-base lg:text-[1.375rem] text-secondary font-semibold font-Roboto ml-1 cursor-pointer"
               >
                 LogIn
               </span>
@@ -145,9 +145,9 @@ function SignUp(props) {
             <div className="flex items-center gap-2 justify-center mt-4">
               <input
                 type="checkbox"
-                className="w-[28px] h-[28px] bg-secondary"
+                className="w-[20px] h-[20px] lg:w-[28px] lg:h-[28px] bg-secondary"
               />{" "}
-              <p className="text-[#000] text-base lg:text-lg font-Roboto">
+              <p className="text-[#000] text-xs lg:text-lg font-Roboto">
                 I agree to{" "}
                 <span className="text-primary cursor-pointer">
                   {" "}
