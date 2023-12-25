@@ -14,6 +14,10 @@ import Footer from "./components/Landingpage/Footer";
 import SecondNav from "./components/businessOwners/SecondNav";
 import Owners from "./components/businessOwners/Owners";
 import Investors from "./components/investors/Investors";
+import ThirdNav from "./components/businessOpportunity/ThirdNav";
+import BusinessOpportunity from "./components/businessOpportunity/BusinessOpportunity";
+import AboutUs from "./components/aboutUs/AboutUs";
+import Newsletter from "./components/Landingpage/Newsletter";
 
 function App() {
   return (
@@ -27,7 +31,11 @@ function App() {
       {/* <Footer /> */}
       {/* <SecondNav /> */}
       {/* <Owners /> */}
-      <Investors />
+      {/* <Investors /> */}
+      {/* <ThirdNav /> */}
+      {/* <BusinessOpportunity /> */}
+      <AboutUs />
+      {/* <Newsletter /> */}
     </div>
   );
 }
