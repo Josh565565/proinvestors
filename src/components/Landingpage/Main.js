@@ -91,6 +91,7 @@ function Main() {
       </div>
       <div>
         <div className="flex gap-5 items-center justify-between mt-12 overflow-hidden lg:mr-[250px]">
+          <div>
           <AnimatedImage
             src={MAIN1}
             alt="Side image 1"
@@ -99,6 +100,8 @@ function Main() {
             whileInView="visible"
             viewport={{ once: true }}
           />
+          </div>
+          
           <div>
             <p className="flex items-center justify-center rounded-full bg-primary text-white w-10 h-10 overflow-hidden font-bold xl:text-2xl xl:w-[64px] xl:h-[64px]">
               1
@@ -110,6 +113,7 @@ function Main() {
           </div>
         </div>
         <div className="flex flex-row-reverse gap-5 items-center justify-between mt-12 lg:ml-[250px]">
+          <div>
           <AnimatedImage
             src={MAIN2}
             alt="Side image 1"
@@ -118,6 +122,8 @@ function Main() {
             whileInView="visible"
             viewport={{ once: true }}
           />
+          </div>
+          
           <div className="pl-5">
             <p className="flex items-center justify-center rounded-full bg-primary text-white w-10 h-10 font-bold xl:text-2xl xl:w-[64px] xl:h-[64px] ">
               2
