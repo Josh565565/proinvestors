@@ -1,15 +1,27 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import ThirdNav from "./ThirdNav";
 
+import { useLocation, useNavigate } from "react-router-dom";
+import { useParams } from "react-router-dom";
+import { useHistory } from 'react-router-dom';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { item1, item2, tran } from "../businessOwners/data";
 
 // Images import start
 import Profile from "../images/profile.jpg";
 import BlissOpp from "../images/bliss-opp.jpg";
 import LoadingLine from "../images/loading-line.svg";
 import Footer from "../Landingpage/Footer";
+import { useImage } from "../ImageContext";
 
-function BusinessOpportunity() {
+function BusinessOpportunity(props) {
+  const { selectedImage } = useImage();
+
+  const navigate = useNavigate();
+	const goBack = () => {
+		navigate(-1);
+	}
+
   return (
     <div>
       <div>
@@ -18,7 +30,7 @@ function BusinessOpportunity() {
       {/* Main start */}
       <div className="flex lg:gap-5">
         <div className="bg-white lg:bg-primary lg:hidden xl:block relative lg:w-[200px] lg:h-[550px] xl:w-[290px] xl:h-[550px] ">
-          <div className="hidden lg:flex items-center justify-center gap-3 w-[105px] h-[40px] border rounded-[6px] border-[#909090] mt-2 ml-20 cursor-pointer">
+          <div onClick={goBack} className="hidden lg:flex items-center justify-center gap-3 w-[105px] h-[40px] border rounded-[6px] border-[#909090] mt-2 ml-20 cursor-pointer hover:scale-105">
             <FontAwesomeIcon
               icon="fa-solid fa-arrow-left"
               className="text-[#F8F8F8]"
@@ -29,27 +41,29 @@ function BusinessOpportunity() {
         <div className="flex flex-col w-[100%] items-center px-2 lg:w-[980px] xl:items-start">
           <div className="mt-5 lg:mt-0">
             <div className="flex items-center gap-1">
-              <img
-                src={Profile}
-                alt="Profile"
-                className="w-[40px] h-[40px] md:w-[50px] md:h-[50px] rounded-full"
-              />
-              <div>
-                <h3 className="text-base text-[#323232] font-bold font-Roboto lg:text-[1.75rem]">
-                  Blissful Bakes
-                </h3>
-                <p className="text-[#717171] text-xs font-medium font-Inter lg:hidden">
-                  Sweet Haven Bakery
-                </p>
-              </div>
+            <img
+              src={Profile}
+              alt="Profile"
+              className="w-[40px] h-[40px] md:w-[50px] md:h-[50px] rounded-full"
+            />
+            <div>
+              <h3 className="text-base text-[#323232] font-bold font-Roboto lg:text-[1.75rem]">
+                Blissful Bakes
+              </h3>
+              <p className="text-[#717171] text-xs font-medium font-Inter lg:hidden">
+                Sweet Haven Bakery
+              </p>
             </div>
+          </div>
+            
+            
             <p className="text-[0.6875rem] md:text-sm text-[#909090] font-Inter w-[290px] lg:text-sm lg:w-[702px] mb-3">
               Introducing Viatour: Igniting Your Adventurous Spirit, so come
               along with us as we explore together a beautiful Nigeria.
             </p>
             <div className="flex items-center gap-6 relative lg:gap-10 xl:gap-6">
               <img
-                src={BlissOpp}
+                src={selectedImage}
                 alt=""
                 className="w-[195px] h-[200px] md:w-[405px] md:h-[300px] lg:w-[510px] lg:h-[374px] xl:w-[610px] xl:h-[374px]"
               />
@@ -92,7 +106,7 @@ function BusinessOpportunity() {
                   </p>
                 </div>
                 <div>
-                  <button className=" bg-secondary text-[#313131] font-bold font-Inter rounded-[5px] w-[350px] h-[40px] absolute bottom-[-50px] left-2 md:static md:w-[315px] md:h-[48px] lg:text-lg lg:w-[315px] lg:h-[48px]">
+                  <button className=" bg-secondary text-[#313131] font-bold font-Inter rounded-[5px] w-[350px] h-[40px] absolute bottom-[-50px] left-2 md:static md:w-[315px] md:h-[48px] lg:text-lg lg:w-[315px] lg:h-[48px] hover:scale-105">
                     Invest Now
                   </button>
                 </div>

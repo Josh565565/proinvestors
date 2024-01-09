@@ -2,14 +2,16 @@ import React, { useState, useEffect } from "react";
 import SecondNav from "./SecondNav";
 import Top from "./Top";
 import Footer from "../Landingpage/Footer";
+import { Link } from "react-router-dom";
 
 import { item1, item2, tran } from "./data";
 
 // Imapges import start
 import Arrow from "../images/arrow.svg";
 import Tran from "../images/transaction-arrow.svg";
+import { useImage } from "../ImageContext";
 
-function Owners() {
+function Owners(props) {
   const [isSmallScreen, setIsSmallScreen] = useState(false);
 
   const slideRight = () => {
@@ -48,6 +50,13 @@ function Owners() {
       window.removeEventListener("resize", handleResize);
     };
   }, []);
+
+  // New
+  const { setSelectedImage } = useImage();
+
+  const handleClick = (img) => {
+    setSelectedImage(img);
+  };
   return (
     <div>
       <SecondNav />
@@ -86,11 +95,13 @@ function Owners() {
                         style={{ flexBasis: "calc(25% - 1rem)" }}
                       >
                         <div className="w-[233px] h-[150px] rounded-t-xl overflow-hidden lg:w-[400px] lg:h-[197px]">
+                        <Link to={item.link} onClick={() => handleClick(item.img)}>
                           <img
                             src={item.img}
-                            alt=""
+                            alt={item.name}
                             className="lg:w-[400px] lg:h-[197px]"
                           />
+                          </Link>
                         </div>
                         <div className="px-2 py-2 bg-primary w-[233px] h-[96px] rounded-b-xl lg:w-[400px] lg:h-[145px]">
                           <p className="text-[#F8F8F8] text-sm font-bold font-Roboto lg:text-xl">
@@ -167,11 +178,13 @@ function Owners() {
                       style={{ flexBasis: "calc(25% - 1rem)" }}
                     >
                       <div className="w-[233px] h-[150px] rounded-t-xl overflow-hidden lg:w-[400px] lg:h-[197px]">
+                      <Link to={item.link} onClick={() => handleClick(item.img)}>
                         <img
                           src={item.img}
                           alt=""
                           className="lg:w-[400px] lg:h-[197px]"
                         />
+                        </Link>
                       </div>
                       <div className="px-2 py-2 bg-primary w-[233px] h-[96px] rounded-b-xl lg:w-[400px] lg:h-[145px]">
                         <p className="text-[#F8F8F8] text-sm font-bold font-Roboto lg:text-xl">
@@ -249,11 +262,13 @@ function Owners() {
                         style={{ flexBasis: "calc(25% - 1rem)" }}
                       >
                         <div className="w-[233px] h-[150px] rounded-t-xl overflow-hidden lg:w-[400px] lg:h-[197px]">
+                        <Link to={item.link} onClick={() => handleClick(item.img)}>
                           <img
                             src={item.img}
                             alt=""
                             className="lg:w-[400px] lg:h-[197px]"
                           />
+                          </Link>
                         </div>
                         <div className="px-2 py-2 bg-primary w-[233px] h-[96px] rounded-b-xl lg:w-[400px] lg:h-[145px]">
                           <p className="text-[#F8F8F8] text-sm font-bold font-Roboto lg:text-xl">

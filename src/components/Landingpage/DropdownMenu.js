@@ -1,22 +1,27 @@
 import React from "react";
 
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 function DropdownMenu() {
+
+  const activeLink = 'cursor-pointer bg-secondary text-[#222] p-2 pl-2 rounded-full';
+  const normalLink = '';
   return (
     <div className=" flex flex-col uppercase text-xs bg-primary w-[180px] text-white px-5 pt-5 pb-6 gap-5 rounded font-bold ">
-      <p className="cursor-pointer bg-secondary text-[#222] w-20 p-2 pl-2 rounded-full">
+       <NavLink to="/" className={({ isActive }) => (isActive ? activeLink : normalLink)}>
+      <p className="">
         Home
       </p>
-      <Link to="/investors">
+      </NavLink>
+      <NavLink to="/investors" className={({ isActive }) => (isActive ? activeLink : normalLink)}>
         <p className="cursor-pointer">Investors</p>
-      </Link>
-      <Link to="/owners">
+      </NavLink>
+      <NavLink to="/owners" className={({ isActive }) => (isActive ? activeLink : normalLink)}>
         <p className="cursor-pointer">Business Owners</p>
-      </Link>
-      <Link to="/aboutus">
+      </NavLink>
+      <NavLink to="/aboutus" className={({ isActive }) => (isActive ? activeLink : normalLink)}>
         <p className="cursor-pointer">About Us</p>
-      </Link>
+      </NavLink>
     </div>
   );
 }

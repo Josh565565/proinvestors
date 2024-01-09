@@ -12,6 +12,9 @@ module.exports = {
         "hero-bg": "url('/src/components/Landingpage/images/bg.svg')",
       },
     },
+    fontFamily: {
+      Roboto: ["Roboto", "sans-serif"],
+    },
   },
   plugins: [],
 };

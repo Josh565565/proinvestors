@@ -128,14 +128,6 @@ function Investors() {
     var slider = document.getElementById("slider");
     slider.scrollLeft = slider.scrollLeft + 300;
   };
-  const slideRight2 = () => {
-    var slider = document.getElementById("slider2");
-    slider.scrollLeft = slider.scrollLeft + 300;
-  };
-  const slideRight3 = () => {
-    var slider = document.getElementById("slider3");
-    slider.scrollLeft = slider.scrollLeft + 300;
-  };
 
   // Helper function to chunk the array into sets of four items
   const chunkArray = (arr, size) => {
@@ -292,11 +284,11 @@ function Investors() {
                           <img
                             src={item.pic}
                             alt={item.name}
-                            className="w-[156px] h-[199px] lg:w-[260px] lg:h-[330px]"
+                            className="w-[156px] h-[199px] lg:w-[260px] lg:h-[330px] hover:scale-105 cursor-pointer"
                           />
                         </div>
                         <div className=" bg-white pr-1 py-2 w-[156px]  lg:w-[260px]">
-                          <p className="text-b text-sm font-bold font-Roboto lg:text-lg">
+                          <p className="text-b text-sm font-bold font-Roboto lg:text-lg cursor-pointer">
                             {item.name}
                           </p>
                           <p className="text-[#717171] text-[0.6875rem] font-Inter pt-2 lg:text-sm">
@@ -352,11 +344,11 @@ function Investors() {
                             <img
                               src={item.pic}
                               alt={item.name}
-                              className="w-[156px] h-[199px] lg:w-[260px] lg:h-[330px]"
+                              className="w-[156px] h-[199px] lg:w-[260px] lg:h-[330px] hover:scale-105 cursor-pointer"
                             />
                           </div>
                           <div className=" bg-white pr-1 py-2 w-[156px]  lg:w-[260px]">
-                            <p className="text-b text-sm font-bold font-Roboto lg:text-lg">
+                            <p className="text-b text-sm font-bold font-Roboto lg:text-lg cursor-pointer">
                               {item.name}
                             </p>
                             <p className="text-[#717171] text-[0.6875rem] font-Inter pt-2 lg:text-sm">

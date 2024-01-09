@@ -1,11 +1,15 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef, useState,  } from "react";
 // import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { Link } from "react-router-dom";
+import { Link , NavLink, useLocation} from "react-router-dom";
+
 
 // Images import
 import Logo from "../images/logo2.svg";
 import DropdownMenu from "../Landingpage/DropdownMenu";
+
+const activeLink = "text-secondary font-bold text-xl";
+const normalLink = "hover:scale-105 hover:font-bold";
 
 function SecondNav() {
   const [openMenu, setOpenMenu] = useState(false);
@@ -34,19 +38,24 @@ function SecondNav() {
       document.removeEventListener("mousedown", clickOut);
     };
   }, []);
+
+  const location = useLocation();
+
+
+
   return (
     <div className="bg-white mt-5 lg:pl-8 lg:mt-0">
       <nav className="flex justify-between items-center lg:h-40">
         <div className="flex items-center">
-          <Link to="/">
+          <NavLink to="/">
             <img src={Logo} alt="Logo Image" className="w-10 ml-4 lg:w-16" />
-          </Link>
-          <Link to="/">
+          </NavLink>
+          <NavLink to="/">
             <p className=" text-xl text-b lg:text-[2rem]">
               <span className="text-[#00FFFF] font-bold ">Pro</span>
               Investors
             </p>
-          </Link>
+          </NavLink>
         </div>
 
         <div className="flex items-center gap-9 mr-5 relative lg:hidden ">
@@ -84,21 +93,38 @@ function SecondNav() {
         <div className="hidden lg:flex bg-white  h-[62px] justify-end items-center pr-16 ">
           <ul className="flex gap-10 text-[#717171] text-lg items-center">
             <li className=" flex flex-col items-center relative">
-              <a className=" text-primary font-bold text-xl " href="">
+            <NavLink to="/" className={({ isActive }) => (isActive ? activeLink : normalLink)}>
+              <a className="" href="">
                 Home
               </a>
-              <div className="w-11 h-1.5 rounded bg-primary absolute top-10"></div>
+              </NavLink>
             </li>
-            <li>
+            <li className=" flex flex-col items-center relative">
+            <NavLink to="/investors" className={location.pathname === "/investors" ? activeLink : normalLink}>
               <a href="">Investors</a>
+              
+              </NavLink>
+              {location.pathname === "/investors" && (
+              <div className="w-11 h-1.5 rounded bg-secondary absolute top-8"></div>
+            )}
             </li>
-            <li>
+            <li className=" flex flex-col items-center relative">
+              <NavLink to="/owners" className={location.pathname === "/owners" ? activeLink : normalLink}>
               <a href="">Business Owners</a>
+              </NavLink>     
+              {location.pathname === "/owners" && (
+              <div className="w-11 h-1.5 rounded bg-secondary absolute top-8"></div>
+            )}
             </li>
-            <li>
+            <li className=" flex flex-col items-center relative">
+            <NavLink to="/aboutus" className={location.pathname === "/aboutus" ? activeLink : normalLink}>
               <a href="">About Us</a>
+              </NavLink>
+              {location.pathname === "/aboutus" && (
+              <div className="w-11 h-1.5 rounded bg-secondary absolute top-8"></div>
+            )}
             </li>
-            <li className="px-5 py-2 bg-secondary text-white rounded-[8px]">
+            <li className="px-5 py-2 bg-secondary text-white rounded-[8px] cursor-pointer hover:scale-105">
               <a className="text-b font-bold" href="">
                 Contact Us
               </a>

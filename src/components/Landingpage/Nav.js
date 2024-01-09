@@ -88,17 +88,17 @@ function Nav() {
               </Link>
               <div className="w-11 h-1.5 rounded bg-primary absolute top-10"></div>
             </li>
-            <li>
+            <li className="lg:hover:scale-110 lg:hover:font-bold">
               <Link to="/investors">
                 <a href="">Investors</a>
               </Link>
             </li>
-            <li>
+            <li className="lg:hover:scale-110 lg:hover:font-bold">
               <Link to="/owners">
                 <a href="">Business Owners</a>
               </Link>
             </li>
-            <li>
+            <li className="lg:hover:scale-110 lg:hover:font-bold">
               <Link to="/aboutus">
                 <a href="">About Us</a>
               </Link>

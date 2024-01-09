@@ -2,6 +2,7 @@ import React, { useState } from "react";
 
 import SignUp from "../Auth/SignUp";
 import SignIn from "../Auth/SignIn";
+import { motion } from "framer-motion"
 
 // Images import
 import BG from "./images/bg-img.svg";
@@ -42,52 +43,105 @@ function Hero() {
       <div className="bg-hero-bg bg-primary bg-[length:400px] lg:h-[500px] md:h-[420px] bg-no-repeat bg-right-bottom px-[6%] md:bg-[length:400px] lg:bg-[length:500px]">
         <div className="md:flex gap-16 justify-between items-center pt-6">
           <div className="w-[320px] md:w-[450px] lg:w-[640px] xl:w-[700px]">
-            <h3 className="leading-normal text-white text-[1.2rem] font-bold md:text-[1.4rem] lg:text-[2rem] xl:text-[2.49rem] md:leading-snug">
+            <motion.h3 className="leading-normal text-white text-[1.2rem] font-bold md:text-[1.4rem] lg:text-[2rem] xl:text-[2.49rem] md:leading-snug"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.3 }}
+            >
               <span className="text-secondary">Unlock Growth Potential: </span>
               Connect with Small-Budget Investors to Fuel Your Business's
               Success.
-            </h3>
-            <p className="text-xs text-[#D9D9D9] w-[90%] md:w-[90%] md:text-[0.7rem] lg:text-[1rem]">
+            </motion.h3>
+            <p className="text-xs text-[#D9D9D9] w-[90%] md:w-[90%] md:text-[0.7rem] lg:text-[1rem] font-Roboto">
               Our website promotes growth potential by connecting small business
               owners with low-cost investors. Promote cooperation and investment
-              opportunities, Build connections and promote success.
+              opportunities, Build connections and promote success.
             </p>
             <div className="flex gap-5 mt-10">
-              <button
+              <motion.button
                 onClick={toggleSignUp}
-                className=" bg-secondary w-[170px] h-[40px] rounded md:hidden"
+                className=" bg-secondary font-bold w-[170px] h-[40px] rounded md:hidden font-Roboto"
+                initial={{ opacity: 0, scale: 0.5 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{
+                  duration: 0.3,
+                  ease: [0, 0.71, 0.2, 1.01],
+                  scale: {
+                    type: "spring",
+                    damping: 5,
+                    stiffness: 100,
+                    restDelta: 0.001
+                  }
+                }}
               >
                 Get started
-              </button>
-              <button
+              </motion.button>
+              <motion.button
                 onClick={toggleSignUp}
-                className="hidden bg-secondary md:w-[160px] md:h-[55px] lg:w-[250px] lg:h-[57px] lg:text-xl rounded md:block"
+                className="hidden bg-secondary font-bold md:w-[160px] md:h-[55px] lg:w-[250px] lg:h-[57px] lg:text-xl rounded md:block lg:hover:scale-105 font-Roboto"
+                initial={{ opacity: 0, scale: 0.5 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{
+                  duration: 0.3,
+                  ease: [0, 0.71, 0.2, 1.01],
+                  scale: {
+                    type: "spring",
+                    damping: 5,
+                    stiffness: 100,
+                    restDelta: 0.001
+                  }
+                }}
               >
                 Sign up
-              </button>
+              </motion.button>
               <button
                 onClick={toggleSignIn}
-                className="hidden text-xl rounded text=[#D9D9D9] border-2 border-[#737373] text-[#D9D9D9] md:w-[160px] md:h-[55px] lg:w-[250px] lg:h-[57px] md:block"
+                className="hidden text-xl rounded font-bold text=[#D9D9D9] border-2 border-[#737373] text-[#D9D9D9] md:w-[160px] md:h-[55px] lg:w-[250px] lg:h-[57px] md:block lg:hover:scale-105 font-Roboto"
               >
                 Login
               </button>
             </div>
           </div>
           <div className="py-[70px]  md:py-0 w-[500px]">
-            <div className="">
-              <img
+            <motion.div className="">
+              <motion.img
                 src={BG}
                 alt="man image"
                 className="hidden w-[250px] md:block md:w-[320px] lg:w-[400px]"
+                initial={{ opacity: 0, scale: 0.5 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{
+                  duration: 0.3,
+                  ease: [0, 0.71, 0.2, 1.01],
+                  scale: {
+                    type: "spring",
+                    damping: 5,
+                    stiffness: 100,
+                    restDelta: 0.001
+                  }
+                }}
+
               />
               <div className="">
-                <img
+                <motion.img
                   src={BGM}
                   alt="man image"
-                  className="block pl-6 md:hidden "
+                  className="block pl-6 md:hidden"
+                  initial={{ opacity: 0, scale: 0.5 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{
+                  duration: 0.3,
+                  ease: [0, 0.71, 0.2, 1.01],
+                  scale: {
+                    type: "spring",
+                    damping: 5,
+                    stiffness: 100,
+                    restDelta: 0.001
+                  }
+                }}
                 />
               </div>
-            </div>
+            </motion.div>
           </div>
         </div>
       </div>

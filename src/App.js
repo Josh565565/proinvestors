@@ -10,6 +10,7 @@ import {
   Route,
   Navigate,
   Outlet,
+  useNavigate
 } from "react-router-dom";
 
 import LandingPage from "./LandingPage";
@@ -27,9 +28,12 @@ import AboutUs from "./components/aboutUs/AboutUs";
 import Newsletter from "./components/Landingpage/Newsletter";
 import SignUp from "./components/Auth/SignUp";
 import SignIn from "./components/Auth/SignIn";
+import { ImageProvider } from "./components/ImageContext";
+
 
 function App() {
   return (
+    <ImageProvider>
     <Router>
       <Routes>
         <Route path="/" element={<Outlet />}>
@@ -37,9 +41,11 @@ function App() {
           <Route path="/owners" element={<Owners />} />
           <Route path="/investors" element={<Investors />} />
           <Route path="/aboutus" element={<AboutUs />} />
+          <Route path="/opportunity" element={<BusinessOpportunity />} />
         </Route>
       </Routes>
     </Router>
+    </ImageProvider>
   );
 }
 

@@ -16,6 +16,7 @@ export const item1 = [
     Raised: "Raised",
     Investors: "Investors",
     MinInvestment: "Min.Investment",
+    link: "/opportunity",
   },
   {
     id: 2,
@@ -28,6 +29,7 @@ export const item1 = [
     Raised: "Raised",
     Investors: "Investors",
     MinInvestment: "Min.Investment",
+    link: "/opportunity",
   },
   {
     id: 3,
@@ -40,6 +42,7 @@ export const item1 = [
     Raised: "Raised",
     Investors: "Investors",
     MinInvestment: "Min.Investment",
+    link: "/opportunity",
   },
   {
     id: 4,
@@ -52,6 +55,7 @@ export const item1 = [
     Raised: "Raised",
     Investors: "Investors",
     MinInvestment: "Min.Investment",
+    link: "/opportunity",
   },
   {
     id: 5,
@@ -64,6 +68,7 @@ export const item1 = [
     Raised: "Raised",
     Investors: "Investors",
     MinInvestment: "Min.Investment",
+    link: "/opportunity",
   },
   {
     id: 6,
@@ -76,6 +81,7 @@ export const item1 = [
     Raised: "Raised",
     Investors: "Investors",
     MinInvestment: "Min.Investment",
+    link: "/opportunity",
   },
   {
     id: 7,
@@ -88,6 +94,7 @@ export const item1 = [
     Raised: "Raised",
     Investors: "Investors",
     MinInvestment: "Min.Investment",
+    link: "/opportunity",
   },
   {
     id: 8,
@@ -100,6 +107,7 @@ export const item1 = [
     Raised: "Raised",
     Investors: "Investors",
     MinInvestment: "Min.Investment",
+    link: "/opportunity",
   },
   {
     id: 9,
@@ -112,6 +120,7 @@ export const item1 = [
     Raised: "Raised",
     Investors: "Investors",
     MinInvestment: "Min.Investment",
+    link: "/opportunity",
   },
 ];
 
@@ -127,6 +136,7 @@ export const item2 = [
     Raised: "Raised",
     Investors: "Investors",
     MinInvestment: "Min.Investment",
+    link: "/opportunity",
   },
   {
     id: 2,
@@ -139,6 +149,7 @@ export const item2 = [
     Raised: "Raised",
     Investors: "Investors",
     MinInvestment: "Min.Investment",
+    link: "/opportunity",
   },
   {
     id: 3,
@@ -151,6 +162,7 @@ export const item2 = [
     Raised: "Raised",
     Investors: "Investors",
     MinInvestment: "Min.Investment",
+    link: "/opportunity",
   },
   {
     id: 4,
@@ -163,6 +175,7 @@ export const item2 = [
     Raised: "Raised",
     Investors: "Investors",
     MinInvestment: "Min.Investment",
+    link: "/opportunity",
   },
   {
     id: 5,
@@ -175,6 +188,7 @@ export const item2 = [
     Raised: "Raised",
     Investors: "Investors",
     MinInvestment: "Min.Investment",
+    link: "/opportunity",
   },
   {
     id: 6,
@@ -187,6 +201,7 @@ export const item2 = [
     Raised: "Raised",
     Investors: "Investors",
     MinInvestment: "Min.Investment",
+    link: "/opportunity",
   },
   {
     id: 7,
@@ -199,6 +214,7 @@ export const item2 = [
     Raised: "Raised",
     Investors: "Investors",
     MinInvestment: "Min.Investment",
+    link: "/opportunity",
   },
   {
     id: 8,
@@ -211,6 +227,7 @@ export const item2 = [
     Raised: "Raised",
     Investors: "Investors",
     MinInvestment: "Min.Investment",
+    link: "/opportunity",
   },
   {
     id: 9,
@@ -223,6 +240,7 @@ export const item2 = [
     Raised: "Raised",
     Investors: "Investors",
     MinInvestment: "Min.Investment",
+    link: "/opportunity",
   },
   {
     id: 10,
@@ -235,6 +253,7 @@ export const item2 = [
     Raised: "Raised",
     Investors: "Investors",
     MinInvestment: "Min.Investment",
+    link: "/opportunity",
   },
   {
     id: 11,
@@ -247,6 +266,7 @@ export const item2 = [
     Raised: "Raised",
     Investors: "Investors",
     MinInvestment: "Min.Investment",
+    link: "/opportunity",
   },
   {
     id: 12,
@@ -259,6 +279,7 @@ export const item2 = [
     Raised: "Raised",
     Investors: "Investors",
     MinInvestment: "Min.Investment",
+    link: "/opportunity",
   },
   {
     id: 13,
@@ -271,6 +292,7 @@ export const item2 = [
     Raised: "Raised",
     Investors: "Investors",
     MinInvestment: "Min.Investment",
+    link: "/opportunity",
   },
   {
     id: 14,
@@ -283,6 +305,7 @@ export const item2 = [
     Raised: "Raised",
     Investors: "Investors",
     MinInvestment: "Min.Investment",
+    link: "/opportunity",
   },
   {
     id: 15,
@@ -295,6 +318,7 @@ export const item2 = [
     Raised: "Raised",
     Investors: "Investors",
     MinInvestment: "Min.Investment",
+    link: "/opportunity",
   },
   {
     id: 16,
@@ -307,6 +331,7 @@ export const item2 = [
     Raised: "Raised",
     Investors: "Investors",
     MinInvestment: "Min.Investment",
+    link: "/opportunity",
   },
 ];
 
