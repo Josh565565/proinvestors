@@ -3,7 +3,7 @@ import ThirdNav from "./ThirdNav";
 
 import { useLocation, useNavigate } from "react-router-dom";
 import { useParams } from "react-router-dom";
-import { useHistory } from 'react-router-dom';
+import { useHistory } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { item1, item2, tran } from "../businessOwners/data";
 
@@ -18,9 +18,9 @@ function BusinessOpportunity(props) {
   const { selectedImage } = useImage();
 
   const navigate = useNavigate();
-	const goBack = () => {
-		navigate(-1);
-	}
+  const goBack = () => {
+    navigate(-1);
+  };
 
   return (
     <div>
@@ -30,7 +30,10 @@ function BusinessOpportunity(props) {
       {/* Main start */}
       <div className="flex lg:gap-5">
         <div className="bg-white lg:bg-primary lg:hidden xl:block relative lg:w-[200px] lg:h-[550px] xl:w-[290px] xl:h-[550px] ">
-          <div onClick={goBack} className="hidden lg:flex items-center justify-center gap-3 w-[105px] h-[40px] border rounded-[6px] border-[#909090] mt-2 ml-20 cursor-pointer hover:scale-105">
+          <div
+            onClick={goBack}
+            className="hidden lg:flex items-center justify-center gap-3 w-[105px] h-[40px] border rounded-[6px] border-[#909090] mt-2 ml-20 cursor-pointer hover:scale-105"
+          >
             <FontAwesomeIcon
               icon="fa-solid fa-arrow-left"
               className="text-[#F8F8F8]"
@@ -41,25 +44,25 @@ function BusinessOpportunity(props) {
         <div className="flex flex-col w-[100%] items-center px-2 lg:w-[980px] xl:items-start">
           <div className="mt-5 lg:mt-0">
             <div className="flex items-center gap-1">
-            <img
-              src={Profile}
-              alt="Profile"
-              className="w-[40px] h-[40px] md:w-[50px] md:h-[50px] rounded-full"
-            />
-            <div>
-              <h3 className="text-base text-[#323232] font-bold font-Roboto lg:text-[1.75rem]">
-                Blissful Bakes
-              </h3>
-              <p className="text-[#717171] text-xs font-medium font-Inter lg:hidden">
-                Sweet Haven Bakery
-              </p>
+              <img
+                src={Profile}
+                alt="Profile"
+                className="w-[40px] h-[40px] md:w-[50px] md:h-[50px] rounded-full"
+              />
+              <div>
+                <h3 className="text-base text-[#323232] font-bold font-Roboto lg:text-[1.75rem]">
+                  Blissful Bakes
+                </h3>
+                <p className="text-[#717171] text-xs font-medium font-Inter lg:hidden">
+                  Sweet Haven Bakery
+                </p>
+              </div>
             </div>
-          </div>
-            
-            
-            <p className="text-[0.6875rem] md:text-sm text-[#909090] font-Inter w-[290px] lg:text-sm lg:w-[702px] mb-3">
-              Introducing Viatour: Igniting Your Adventurous Spirit, so come
-              along with us as we explore together a beautiful Nigeria.
+            <p className="text-base text-[#444444] font-medium font-Roboto w-[360px] md:w-[430px] lg:text-sm lg:w-[582px] mb-3">
+              Blissful Bakes - where every treat is a symphony of flavors
+              crafted with love, from decadent cakes to delicate pastries, each
+              confection is a masterpiece that promises to elevate your taste
+              buds to new heights of delight.
             </p>
             <div className="flex items-center gap-6 relative lg:gap-10 xl:gap-6">
               <img
@@ -114,16 +117,16 @@ function BusinessOpportunity(props) {
             </div>
             {/*  */}
             <div className="flex justify-between text-[#313131] font_inter mt-16 border-b border-b-[#909090]  md:mt-5 w-[350px] text-base md:text-xl md:w-[405px] lg:w-[510px] xl:w-[610px]">
-              <p>Overview</p>
+              <p className="text-[#B3B3B3] lg:text-xl font-Roboto">Overview</p>
               <div className="flex flex-col items-center mt-1">
-                <p className="text-[#313131] font-bold">About</p>
+                <p className="text-[#313131] font-bold font-Roboto">About</p>
                 <div className="bg-b w-[90px] h-[3px] md:w-[122px] md:h-[4px]"></div>
               </div>
-              <p>Terms</p>
-              <p>Documents</p>
+              <p className="text-[#B3B3B3] lg:text-xl font-Roboto">Terms</p>
+              <p className="text-[#B3B3B3] lg:text-xl font-Roboto">Documents</p>
             </div>
             <div className=" mt-5 w-[350px] text-[#717171] font-Inter text-xs md:text-sm md:w-[405px] lg:w-[510px] xl:w-[610px]">
-              <p className="pb-20">
+              <p className="pb-20 font-Roboto">
                 Welcome to Bliss Bakes, where indulgence meets pure bliss! We
                 are a boutique bakery dedicated to creating mouthwatering treats
                 that delight the senses and leave you craving for more. With a

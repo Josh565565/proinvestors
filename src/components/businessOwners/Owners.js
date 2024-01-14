@@ -7,6 +7,7 @@ import { Link } from "react-router-dom";
 import { item1, item2, tran } from "./data";
 
 // Imapges import start
+import Logo from "../images/logo2.svg";
 import Arrow from "../images/arrow.svg";
 import Tran from "../images/transaction-arrow.svg";
 import { useImage } from "../ImageContext";
@@ -59,7 +60,12 @@ function Owners(props) {
   };
   return (
     <div>
-      <SecondNav />
+      <SecondNav
+        bg="bg-white"
+        text="text-[#717171]"
+        contact="text-b"
+        logo={Logo}
+      />
       <Top
         head="Investment opportunities on Proinvestor."
         body1="On Proinvestor, you can look at current investment options. All
@@ -95,12 +101,15 @@ function Owners(props) {
                         style={{ flexBasis: "calc(25% - 1rem)" }}
                       >
                         <div className="w-[233px] h-[150px] rounded-t-xl overflow-hidden lg:w-[400px] lg:h-[197px]">
-                        <Link to={item.link} onClick={() => handleClick(item.img)}>
-                          <img
-                            src={item.img}
-                            alt={item.name}
-                            className="lg:w-[400px] lg:h-[197px]"
-                          />
+                          <Link
+                            to={item.link}
+                            onClick={() => handleClick(item.img)}
+                          >
+                            <img
+                              src={item.img}
+                              alt={item.name}
+                              className="lg:w-[400px] lg:h-[197px]"
+                            />
                           </Link>
                         </div>
                         <div className="px-2 py-2 bg-primary w-[233px] h-[96px] rounded-b-xl lg:w-[400px] lg:h-[145px]">
@@ -178,12 +187,15 @@ function Owners(props) {
                       style={{ flexBasis: "calc(25% - 1rem)" }}
                     >
                       <div className="w-[233px] h-[150px] rounded-t-xl overflow-hidden lg:w-[400px] lg:h-[197px]">
-                      <Link to={item.link} onClick={() => handleClick(item.img)}>
-                        <img
-                          src={item.img}
-                          alt=""
-                          className="lg:w-[400px] lg:h-[197px]"
-                        />
+                        <Link
+                          to={item.link}
+                          onClick={() => handleClick(item.img)}
+                        >
+                          <img
+                            src={item.img}
+                            alt=""
+                            className="lg:w-[400px] lg:h-[197px]"
+                          />
                         </Link>
                       </div>
                       <div className="px-2 py-2 bg-primary w-[233px] h-[96px] rounded-b-xl lg:w-[400px] lg:h-[145px]">
@@ -262,12 +274,15 @@ function Owners(props) {
                         style={{ flexBasis: "calc(25% - 1rem)" }}
                       >
                         <div className="w-[233px] h-[150px] rounded-t-xl overflow-hidden lg:w-[400px] lg:h-[197px]">
-                        <Link to={item.link} onClick={() => handleClick(item.img)}>
-                          <img
-                            src={item.img}
-                            alt=""
-                            className="lg:w-[400px] lg:h-[197px]"
-                          />
+                          <Link
+                            to={item.link}
+                            onClick={() => handleClick(item.img)}
+                          >
+                            <img
+                              src={item.img}
+                              alt=""
+                              className="lg:w-[400px] lg:h-[197px]"
+                            />
                           </Link>
                         </div>
                         <div className="px-2 py-2 bg-primary w-[233px] h-[96px] rounded-b-xl lg:w-[400px] lg:h-[145px]">
@@ -340,7 +355,7 @@ function Owners(props) {
               <div className="h-[40px] w-[40px] rounded-full flex items-center justify-center bg-[#F2F2F2] lg:h-[60px] lg:w-[60px]">
                 <img src={Tran} alt="" className="w-[15px] lg:w-[24px]" />
               </div>
-              <div className="lg:flex lg:gap-1 w-[110px] lg:w-[220px]">
+              <div className="lg:flex lg:gap-1 w-[110px] lg:w-[230px]">
                 <p className="text-[#F8F8F8] text-xs font-medium font-Inter lg:text-lg">
                   Invest In
                 </p>

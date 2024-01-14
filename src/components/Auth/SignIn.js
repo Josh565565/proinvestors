@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 // Images Import start
 // import Logo from "../Landingpage/images/logo.svg";
 import Logo from "../images/logo2.svg";
-import BG from "../images/signin.png";
+import BG from "../images/signin.svg";
 import Google from "../images/google.svg";
 
 function SignIn(props) {
@@ -19,10 +19,10 @@ function SignIn(props) {
           <img
             src={BG}
             alt=""
-            className="hidden lg:block lg:w-[455px] lg:h-[900px] xl:w-[704px] xl:h-[1072px]"
+            className="hidden lg:block lg:w-[455px] lg:h-[658px] xl:w-[551px] xl:h-[798px]"
           />
         </div>
-        <div className="bg-white rounded lg:rounded-none p-5 mx-5 lg:mx-0 flex flex-col items-center lg:w-[455px] lg:h-[900px] xl:w-[704px] xl:h-[1072px] relative pt-10">
+        <div className="bg-white rounded lg:rounded-none p-5 mx-5 lg:mx-0 flex flex-col items-center lg:w-[455px] lg:h-[900px] xl:w-[604px] xl:h-[1072px] relative pt-10">
           <div
             onClick={props.close}
             className="flex items-center justify-center w-[30px] h-[30px] lg:w-[40px] lg:h-[40px] rounded-full bg-secondary absolute right-0 mt-[-30px] mr-2 cursor-pointer"
@@ -41,7 +41,7 @@ function SignIn(props) {
             </p>
           </div>
           {/*  */}
-          <div className="flex flex-col items-center mt-10 lg:mt-20">
+          <div className="flex flex-col items-center mt-10 lg:mt-5">
             <p className="text-b text-xl lg:text-[1.75rem] font-bold font-Roboto">
               Login
             </p>
@@ -55,37 +55,37 @@ function SignIn(props) {
                 </p>
                 <input
                   type="text"
-                  className="w-[300px] h-[54px] lg:w-[390px] lg:h-[54px] xl:w-[548px] xl:h-[73px] rounded-[8px] outline outline-1 pl-3"
+                  className="w-[310px] h-[45px] lg:w-[390px] lg:h-[54px] xl:w-[548px] xl:h-[73px] rounded-[8px] outline outline-1 pl-3"
                 />
               </div>
 
               {/*  */}
-              <div className="lg:mt-5 xl:mt-12">
+              <div className="mt-3 xl:mt-8">
                 <p className="text-[#737373] text-sm lg:text-lg font-Roboto pb-1">
                   Password
                 </p>
                 <input
                   type="password"
-                  className="w-[300px] h-[54px] lg:w-[390px] lg:h-[54px] xl:w-[548px] xl:h-[73px] rounded-[8px] outline outline-1 pl-3"
+                  className="w-[310px] h-[45px] lg:w-[390px] lg:h-[54px] xl:w-[548px] xl:h-[73px] rounded-[8px] outline outline-1 pl-3"
                 />
               </div>
               {/*  */}
               <div className="ml-[170px] lg:ml-[200px] xl:ml-[360px] mt-3">
-                <p className=" text-right text-primary text-base lg:text-[1.5rem] font-Inter cursor-pointer">
+                <p className=" text-right text-primary text-base lg:text-[1.5rem] font-Inter cursor-pointer hover:scale-105">
                   Forgot password?
                 </p>
               </div>
               {/*  */}
 
-              <div className="mt-10 lg:mt-20">
+              <div className="mt-10 lg:mt-10">
                 <input
                   type="button"
                   value="LogIn"
-                  className="w-[300px] h-[54px] lg:w-[390px] lg:h-[54px] xl:w-[536px] xl:h-[73px] rounded-[8px] font-semibold text-white text-xl lg:text-[1.375rem] bg-primary cursor-pointer"
+                  className="w-[310px] h-[45px] lg:w-[390px] lg:h-[54px] xl:w-[536px] xl:h-[73px] rounded-[8px] font-semibold text-b text-xl lg:text-[1.375rem] bg-secondary cursor-pointer hover:scale-105"
                 />
               </div>
-              <div className="mt-5 xl:mt-10">
-                <button className="w-[300px] h-[54px] lg:w-[390px] lg:h-[54px] xl:w-[536px] xl:h-[73px]  text-base rounded-[8px] font-Roboto font-semibold lg:text-lg outline outline-1 bg-white flex items-center gap-3 justify-center">
+              <div className="mt-5 xl:mt-5">
+                <button className="w-[310px] h-[45px] lg:w-[390px] lg:h-[54px] xl:w-[536px] xl:h-[73px]  text-base rounded-[8px] font-Roboto font-semibold lg:text-lg outline outline-1 bg-white flex items-center gap-3 justify-center hover:scale-105">
                   <img src={Google} alt="" /> <p>Register with Google</p>
                 </button>
               </div>

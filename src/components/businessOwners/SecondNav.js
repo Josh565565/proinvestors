@@ -1,8 +1,7 @@
-import React, { useEffect, useRef, useState,  } from "react";
+import React, { useEffect, useRef, useState } from "react";
 // import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { Link , NavLink, useLocation} from "react-router-dom";
-
+import { Link, NavLink, useLocation } from "react-router-dom";
 
 // Images import
 import Logo from "../images/logo2.svg";
@@ -11,7 +10,7 @@ import DropdownMenu from "../Landingpage/DropdownMenu";
 const activeLink = "text-secondary font-bold text-xl";
 const normalLink = "hover:scale-105 hover:font-bold";
 
-function SecondNav() {
+function SecondNav(props) {
   const [openMenu, setOpenMenu] = useState(false);
   const [showCloseMenu, setShowCloseMenu] = useState(false);
 
@@ -41,17 +40,19 @@ function SecondNav() {
 
   const location = useLocation();
 
-
-
   return (
-    <div className="bg-white mt-5 lg:pl-8 lg:mt-0">
+    <div className={`${props.bg} mt-5 lg:pl-8 lg:mt-0`}>
       <nav className="flex justify-between items-center lg:h-40">
         <div className="flex items-center">
           <NavLink to="/">
-            <img src={Logo} alt="Logo Image" className="w-10 ml-4 lg:w-16" />
+            <img
+              src={props.logo}
+              alt="Logo Image"
+              className="w-10 ml-4 lg:w-16"
+            />
           </NavLink>
           <NavLink to="/">
-            <p className=" text-xl text-b lg:text-[2rem]">
+            <p className={`text-xl ${props.text} lg:text-[2rem]`}>
               <span className="text-[#00FFFF] font-bold ">Pro</span>
               Investors
             </p>
@@ -68,13 +69,13 @@ function SecondNav() {
           </div>
           {showCloseMenu ? (
             <FontAwesomeIcon
-              className="text-[#000] h-6"
+              className={`${props.menu} h-6`}
               icon="fa-solid fa-close"
               onClick={toggleMenu}
             />
           ) : (
             <FontAwesomeIcon
-              className="text-[#000] h-6"
+              className={`${props.menu} h-6`}
               icon="fa-solid fa-bars"
               onClick={toggleMenu}
             />
@@ -90,42 +91,63 @@ function SecondNav() {
           </div>
         </div>
 
-        <div className="hidden lg:flex bg-white  h-[62px] justify-end items-center pr-16 ">
-          <ul className="flex gap-10 text-[#717171] text-lg items-center">
+        <div
+          className={`hidden lg:flex ${props.bg} h-[62px] justify-end items-center pr-16`}
+        >
+          <ul className={`flex gap-10 ${props.text} text-lg items-center`}>
             <li className=" flex flex-col items-center relative">
-            <NavLink to="/" className={({ isActive }) => (isActive ? activeLink : normalLink)}>
-              <a className="" href="">
-                Home
-              </a>
+              <NavLink
+                to="/"
+                className={({ isActive }) =>
+                  isActive ? activeLink : normalLink
+                }
+              >
+                <a className="" href="">
+                  Home
+                </a>
               </NavLink>
             </li>
             <li className=" flex flex-col items-center relative">
-            <NavLink to="/investors" className={location.pathname === "/investors" ? activeLink : normalLink}>
-              <a href="">Investors</a>
-              
+              <NavLink
+                to="/investors"
+                className={
+                  location.pathname === "/investors" ? activeLink : normalLink
+                }
+              >
+                <a href="">Investors</a>
               </NavLink>
               {location.pathname === "/investors" && (
-              <div className="w-11 h-1.5 rounded bg-secondary absolute top-8"></div>
-            )}
+                <div className="w-11 h-1.5 rounded bg-secondary absolute top-8"></div>
+              )}
             </li>
             <li className=" flex flex-col items-center relative">
-              <NavLink to="/owners" className={location.pathname === "/owners" ? activeLink : normalLink}>
-              <a href="">Business Owners</a>
-              </NavLink>     
+              <NavLink
+                to="/owners"
+                className={
+                  location.pathname === "/owners" ? activeLink : normalLink
+                }
+              >
+                <a href="">Business Owners</a>
+              </NavLink>
               {location.pathname === "/owners" && (
-              <div className="w-11 h-1.5 rounded bg-secondary absolute top-8"></div>
-            )}
+                <div className="w-11 h-1.5 rounded bg-secondary absolute top-8"></div>
+              )}
             </li>
             <li className=" flex flex-col items-center relative">
-            <NavLink to="/aboutus" className={location.pathname === "/aboutus" ? activeLink : normalLink}>
-              <a href="">About Us</a>
+              <NavLink
+                to="/aboutus"
+                className={
+                  location.pathname === "/aboutus" ? activeLink : normalLink
+                }
+              >
+                <a href="">About Us</a>
               </NavLink>
               {location.pathname === "/aboutus" && (
-              <div className="w-11 h-1.5 rounded bg-secondary absolute top-8"></div>
-            )}
+                <div className="w-11 h-1.5 rounded bg-secondary absolute top-8"></div>
+              )}
             </li>
             <li className="px-5 py-2 bg-secondary text-white rounded-[8px] cursor-pointer hover:scale-105">
-              <a className="text-b font-bold" href="">
+              <a className={`${props.contact} font-bold`} href="">
                 Contact Us
               </a>
             </li>

@@ -48,14 +48,14 @@ function SignUp(props) {
           {/*  */}
           <div>
             <form className="flex flex-col items-center">
-              <div className="flex flex-col lg:flex-row gap-7 mt-10">
+              <div className="flex flex-row gap-3 md:gap-7 mt-10">
                 <div className="">
                   <p className="text-[#737373] text-sm lg:text-lg font-Roboto pb-1">
                     First Name
                   </p>
                   <input
                     type="text"
-                    className="w-[300px] h-[54px] lg:w-[204px] lg:h-[54px] xl:w-[224px] xl:h-[54px] rounded-[8px] outline outline-1 pl-3"
+                    className="w-[150px] h-[45px] lg:w-[204px] lg:h-[54px] xl:w-[224px] xl:h-[54px] rounded-[8px] outline outline-1 pl-3"
                   />
                 </div>
                 <div className="">
@@ -64,7 +64,7 @@ function SignUp(props) {
                   </p>
                   <input
                     type="text"
-                    className="w-[300px] h-[54px] lg:w-[204px] lg:h-[54px] xl:w-[224px] xl:h-[54px] rounded-[8px] outline outline-1 pl-3"
+                    className="w-[150px] h-[45px] lg:w-[204px] lg:h-[54px] xl:w-[224px] xl:h-[54px] rounded-[8px] outline outline-1 pl-3"
                   />
                 </div>
               </div>
@@ -74,7 +74,7 @@ function SignUp(props) {
                 </p>
                 <input
                   type="text"
-                  className="w-[300px] h-[54px] lg:w-[435px] lg:h-[54px] xl:w-[470px] xl:h-[54px] rounded-[8px] outline outline-1 pl-3"
+                  className="w-[310px] h-[45px] lg:w-[435px] lg:h-[54px] xl:w-[470px] xl:h-[54px] rounded-[8px] outline outline-1 pl-3"
                 />
               </div>
 
@@ -84,7 +84,7 @@ function SignUp(props) {
                 </p>
                 <input
                   type="text"
-                  className="w-[300px] h-[54px] lg:w-[435px] lg:h-[54px] xl:w-[470px] xl:h-[54px] rounded-[8px] outline outline-1 pl-3"
+                  className="w-[310px] h-[45px] lg:w-[435px] lg:h-[54px] xl:w-[470px] xl:h-[54px] rounded-[8px] outline outline-1 pl-3"
                 />
               </div>
               {/*  */}
@@ -92,7 +92,7 @@ function SignUp(props) {
                 <p className="text-[#737373] text-sm lg:text-lg font-Roboto pb-1">
                   Category
                 </p>
-                <select className="w-[300px] h-[54px] lg:w-[435px] lg:h-[54px] xl:w-[470px] xl:h-[54px] rounded-[8px] px-2 outline outline-1">
+                <select className="w-[310px] h-[45px] lg:w-[435px] lg:h-[54px] xl:w-[470px] xl:h-[54px] rounded-[8px] px-2 outline outline-1">
                   <option value="">Select one</option>
                   <option value="option1">Investor</option>
                   <option value="option2">Business owner</option>
@@ -105,7 +105,7 @@ function SignUp(props) {
                 </p>
                 <input
                   type="password"
-                  className="w-[300px] h-[54px] lg:w-[435px] lg:h-[54px] xl:w-[470px] xl:h-[54px] rounded-[8px] outline outline-1 pl-3"
+                  className="w-[310px] h-[45px] lg:w-[435px] lg:h-[54px] xl:w-[470px] xl:h-[54px] rounded-[8px] outline outline-1 pl-3"
                 />
               </div>
               <div className="mt-5">
@@ -114,18 +114,18 @@ function SignUp(props) {
                 </p>
                 <input
                   type="password"
-                  className="w-[300px] h-[54px] lg:w-[435px] lg:h-[54px] xl:w-[470px] xl:h-[54px] rounded-[8px] outline outline-1 pl-3"
+                  className="w-[310px] h-[45px] lg:w-[435px] lg:h-[54px] xl:w-[470px] xl:h-[54px] rounded-[8px] outline outline-1 pl-3"
                 />
               </div>
               <div className="mt-10">
                 <input
                   type="button"
                   value="Register"
-                  className="w-[300px] h-[54px] lg:w-[435px] lg:h-[54px] xl:w-[470px] xl:h-[54px] rounded-[8px] font-semibold text-xl lg:text-[1.375rem] bg-secondary cursor-pointer"
+                  className="w-[310px] h-[45px] lg:w-[435px] lg:h-[54px] xl:w-[470px] xl:h-[54px] rounded-[8px] font-semibold text-xl lg:text-[1.375rem] bg-secondary cursor-pointer hover:scale-105"
                 />
               </div>
               <div className="mt-5">
-                <button className="w-[300px] h-[54px] lg:w-[435px] lg:h-[54px] xl:w-[470px] xl:h-[54px]  text-base rounded-[8px] font-Roboto font-semibold lg:text-lg outline outline-1 bg-white flex items-center gap-3 justify-center">
+                <button className="w-[310px] h-[45px] lg:w-[435px] lg:h-[54px] xl:w-[470px] xl:h-[54px]  text-base rounded-[8px] font-Roboto font-semibold lg:text-lg outline outline-1 bg-white flex items-center gap-3 justify-center hover:scale-105">
                   <img src={Google} alt="" /> <p>Register with Google</p>
                 </button>
               </div>
@@ -149,12 +149,12 @@ function SignUp(props) {
               />{" "}
               <p className="text-[#000] text-xs lg:text-lg font-Roboto">
                 I agree to{" "}
-                <span className="text-primary cursor-pointer">
+                <span className="text-secondary cursor-pointer">
                   {" "}
                   Terms of use{" "}
                 </span>{" "}
                 and{" "}
-                <span className="text-primary cursor-pointer">
+                <span className="text-secondary cursor-pointer">
                   Privacy Policy
                 </span>
               </p>

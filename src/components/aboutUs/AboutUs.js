@@ -2,8 +2,9 @@ import React from "react";
 import SecondNav from "../businessOwners/SecondNav";
 import AboutCard from "./AboutCard";
 
-import AboutPic from "../images/about-pic.jpg";
-import AboutBG from "../images/about-bg-mob.png";
+import Logo from "../Landingpage/images/logo.svg";
+import AboutPic from "../images/about-pic.svg";
+import AboutBG from "../images/about-bg-mob-2.svg";
 import AboutPic2 from "../images/about-pic-2.jpg";
 import AboutPic3 from "../images/about-pic-3.jpg";
 import Profile from "../images/about-profile.png";
@@ -20,26 +21,36 @@ function AboutUs() {
   return (
     <div>
       {/* Nav start */}
-      <div>
-        <SecondNav />
+      <div className="absolute w-full top-0">
+        <SecondNav
+          bg="bg-transparent"
+          text="text-white"
+          logo={Logo}
+          menu="text-[#FFFFFF]"
+        />
       </div>
       {/* Nav end */}
       {/* Main start */}
-      <div>
-        <div className="mt-20 lg:mt-0">
+      <div className="">
+        <div className="">
           <img
             src={AboutPic}
             alt=""
-            className=" hidden  object-fill w-[100%] lg:block "
+            className="hidden object-fill w-[100%] lg:block "
           />
-          <img
-            src={AboutBG}
-            alt=""
-            className=" lg:hidden object-fill w-[100%]"
-          />
+          <div className="min-[360px]:w-[400px] min-[400px]:w-[100%]">
+            <img
+              src={AboutBG}
+              alt=""
+              className="lg:hidden min-[370px]:w-[400px] min-[400px]:w-[100%]"
+            />
+          </div>
+          <h2 className="absolute top-1/2 left-[45%] text-xl md:text-3xl lg:text-[2.25rem] text-white font-bold font-Roboto capitalize">
+            About Us
+          </h2>
         </div>
         {/*  */}
-        <div className="mt-[150px] flex flex-col px-3 items-center lg:items-start lg:flex-row justify-center gap-[50px]">
+        <div className="mt-[40px] lg:mt-[70px] flex flex-col px-1 items-center lg:items-start lg:flex-row justify-center gap-[50px]">
           <div className="">
             <h3 className="text-[#323232] text-xl font-bold font-Roboto lg:text-[2rem]">
               Our Values
@@ -175,7 +186,9 @@ function AboutUs() {
         <Newsletter />
         {/* Newsletter end */}
         {/* Footer start */}
-        <Footer />
+        <div className="min-[360px]:w-[400px] min-[400px]:w-[100%]">
+          <Footer />
+        </div>
         {/* Footer end */}
       </div>
       {/* Main end */}

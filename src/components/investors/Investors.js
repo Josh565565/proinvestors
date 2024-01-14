@@ -6,6 +6,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 // import { item1, item2, tran } from "../businessOwners/data";
 
 // Imapges import start
+import Logo from "../images/logo2.svg";
 import Arrow from "../images/arrow.svg";
 import Right from "../images/right.svg";
 import Line from "../images/line(1).svg";
@@ -161,7 +162,12 @@ function Investors() {
   }
   return (
     <div className="">
-      <SecondNav />
+      <SecondNav
+        bg="bg-white"
+        text="text-[#717171]"
+        contact="text-b"
+        logo={Logo}
+      />
       <Top
         head="Search For Your An Investor"
         body1="Discover top investors from different parts of the world"

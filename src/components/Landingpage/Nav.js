@@ -82,11 +82,11 @@ function Nav() {
           <ul className="flex gap-7 text-[#717171] text-lg">
             <li className=" flex flex-col items-center relative">
               <Link to="/">
-                <a className=" text-primary font-bold text-xl " href="">
+                <a className=" text-secondary font-bold text-xl " href="">
                   Home
                 </a>
               </Link>
-              <div className="w-11 h-1.5 rounded bg-primary absolute top-10"></div>
+              <div className="w-11 h-1.5 rounded bg-secondary absolute top-10"></div>
             </li>
             <li className="lg:hover:scale-110 lg:hover:font-bold">
               <Link to="/investors">
