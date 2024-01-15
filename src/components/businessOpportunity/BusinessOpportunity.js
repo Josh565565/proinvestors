@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import ThirdNav from "./ThirdNav";
 
 import { useNavigate } from "react-router-dom";
@@ -17,6 +17,13 @@ function BusinessOpportunity(props) {
   const goBack = () => {
     navigate(-1);
   };
+
+  useEffect(() => {
+    // Scroll to the top of the page when the component mounts
+    window.scrollTo(0, 0);
+
+    // Additional cleanup or side effect code if needed
+  }, []);
 
   return (
     <div>

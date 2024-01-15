@@ -66,6 +66,7 @@ function Owners(props) {
   const handleClick = (img) => {
     setSelectedImage(img);
   };
+
   return (
     <div>
       <SecondNav
@@ -117,7 +118,7 @@ function Owners(props) {
                             <img
                               src={item.img}
                               alt={item.name}
-                              className="lg:w-[400px] lg:h-[197px]"
+                              className="w-[400px] h-[150px] lg:h-[197px]"
                             />
                           </Link>
                         </div>
@@ -193,7 +194,7 @@ function Owners(props) {
                             <img
                               src={item.img}
                               alt={item.name}
-                              className="lg:w-[400px] lg:h-[197px]"
+                              className="w-[400px] h-[150px] lg:h-[197px]"
                             />
                           </Link>
                         </div>
@@ -279,7 +280,7 @@ function Owners(props) {
                           <img
                             src={item.img}
                             alt=""
-                            className="lg:w-[400px] lg:h-[197px]"
+                            className="w-[400px] h-[150px] lg:h-[197px]"
                           />
                         </Link>
                       </div>
@@ -353,7 +354,7 @@ function Owners(props) {
                           <img
                             src={item.img}
                             alt=""
-                            className="lg:w-[400px] lg:h-[197px]"
+                            className="w-[400px] h-[150px] lg:h-[197px]"
                           />
                         </Link>
                       </div>
@@ -440,7 +441,7 @@ function Owners(props) {
                             <img
                               src={item.img}
                               alt=""
-                              className="lg:w-[400px] lg:h-[197px]"
+                              className="w-[400px] h-[150px] lg:h-[197px]"
                             />
                           </Link>
                         </div>
