@@ -1,15 +1,11 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import ThirdNav from "./ThirdNav";
 
-import { useLocation, useNavigate } from "react-router-dom";
-import { useParams } from "react-router-dom";
-import { useHistory } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { item1, item2, tran } from "../businessOwners/data";
 
 // Images import start
 import Profile from "../images/profile.jpg";
-import BlissOpp from "../images/bliss-opp.jpg";
 import LoadingLine from "../images/loading-line.svg";
 import Footer from "../Landingpage/Footer";
 import { useImage } from "../ImageContext";

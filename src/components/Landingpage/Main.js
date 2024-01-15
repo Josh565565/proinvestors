@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React from "react";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 
@@ -17,8 +17,6 @@ import person2 from "./images/person2(1).png";
 import person3 from "./images/person3(1).png";
 import Robert from "./images/robert.svg";
 import Newsletter from "./Newsletter";
-
-
 
 function AnimatedImage({ src, alt }) {
   const controls = useAnimation();
@@ -52,8 +50,6 @@ function AnimatedImage({ src, alt }) {
     />
   );
 }
-
-
 
 function Main() {
   return (
@@ -92,16 +88,16 @@ function Main() {
       <div>
         <div className="flex gap-5 items-center justify-between mt-12 overflow-hidden lg:mr-[250px]">
           <div>
-          <AnimatedImage
-            src={MAIN1}
-            alt="Side image 1"
-            className="w-[214px] sm:w-[314px] md:w-[325px] overflow-hidden lg:w-[425px] xl:w-[696px]"
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-          />
+            <AnimatedImage
+              src={MAIN1}
+              alt="Side"
+              className="w-[214px] sm:w-[314px] md:w-[325px] overflow-hidden lg:w-[425px] xl:w-[696px]"
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+            />
           </div>
-          
+
           <div>
             <p className="flex items-center justify-center rounded-full bg-primary text-white w-10 h-10 overflow-hidden font-bold xl:text-2xl xl:w-[64px] xl:h-[64px]">
               1
@@ -114,16 +110,16 @@ function Main() {
         </div>
         <div className="flex flex-row-reverse gap-5 items-center justify-between mt-12 lg:ml-[250px]">
           <div>
-          <AnimatedImage
-            src={MAIN2}
-            alt="Side image 1"
-            className="w-[214px] sm:w-[314px] md:w-[325px] overflow-hidden lg:w-[425px] xl:w-[696px]"
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-          />
+            <AnimatedImage
+              src={MAIN2}
+              alt="Side image 1"
+              className="w-[214px] sm:w-[314px] md:w-[325px] overflow-hidden lg:w-[425px] xl:w-[696px]"
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+            />
           </div>
-          
+
           <div className="pl-5">
             <p className="flex items-center justify-center rounded-full bg-primary text-white w-10 h-10 font-bold xl:text-2xl xl:w-[64px] xl:h-[64px] ">
               2
@@ -145,7 +141,11 @@ function Main() {
               </p>
             </div>
           </div>
-          <AnimatedImage src={MAIN3} alt="Side image 1" className="overflow-hidden" />
+          <AnimatedImage
+            src={MAIN3}
+            alt="Side image 1"
+            className="overflow-hidden"
+          />
         </div>
       </div>
       <div className="flex flex-col items-center mt-20 md:flex-row md:justify-center md:gap-2 overflow-hidden lg:gap-[170px] lg:pl-10 xl:gap-[100px] xl:pl-20">
@@ -226,10 +226,12 @@ function Main() {
             <div className="w-[50px] h-[50px] rounded-full bg-secondary absolute top-[-20px] left-4 xl:w-[90px] xl:h-[90px] xl:top-[-40px]"></div>
             <div className="pt-9 ml-4 xl:pt-16">
               <img src={STAR1} alt="" className="w-[190px] xl:w-[240px]" />
-              <motion.p className="text-xs text-[#F2F2F2] pr-5 mt-3 xl:text-base"
-               initial={{ opacity: 0, y: 20 }}
+              <motion.p
+                className="text-xs text-[#F2F2F2] pr-5 mt-3 xl:text-base"
+                initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.3 }}>
+                transition={{ duration: 0.6, delay: 0.3 }}
+              >
                 I've been using this investment website for six months now and i
                 have had some great opportunities to invest in small businesses.
                 the platform is easy to use and provides all the information i

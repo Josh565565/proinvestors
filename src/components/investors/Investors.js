@@ -3,7 +3,7 @@ import SecondNav from "../businessOwners/SecondNav";
 import Top from "../businessOwners/Top";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-// import { item1, item2, tran } from "../businessOwners/data";
+import { investor1, investor2 } from "./data";
 
 // Imapges import start
 import Logo from "../images/logo2.svg";
@@ -12,115 +12,7 @@ import Right from "../images/right.svg";
 import Line from "../images/line(1).svg";
 import Line2 from "../images/line-mob.svg";
 import Robert from "../images/robert.jpg";
-import Mike from "../images/mike.jpg";
-import Mary from "../images/mary.jpg";
-import Olatorera from "../images/olatorera.png";
 import Footer from "../Landingpage/Footer";
-
-const investor = [
-  {
-    id: 1,
-    pic: Mike,
-    name: "Mike Adenuga",
-    description: "Founder and Chairman of Globacom",
-  },
-  {
-    id: 2,
-    pic: Mary,
-    name: "Mary davis",
-    description: "Staff of Berkshire Hathaway",
-  },
-  {
-    id: 3,
-    pic: Olatorera,
-    name: "Mary davis",
-    description: "Staff of Berkshire Hathaway",
-  },
-  {
-    id: 4,
-    pic: Olatorera,
-    name: "Mary davis",
-    description: "Staff of Berkshire Hathaway",
-  },
-  {
-    id: 5,
-    pic: Olatorera,
-    name: "Mary davis",
-    description: "Staff of Berkshire Hathaway",
-  },
-  {
-    id: 6,
-    pic: Olatorera,
-    name: "Mary davis",
-    description: "Staff of Berkshire Hathaway",
-  },
-  {
-    id: 7,
-    pic: Olatorera,
-    name: "Mary davis",
-    description: "Staff of Berkshire Hathaway",
-  },
-  {
-    id: 8,
-    pic: Olatorera,
-    name: "Mary davis",
-    description: "Staff of Berkshire Hathaway",
-  },
-  {
-    id: 9,
-    pic: Olatorera,
-    name: "Mary davis",
-    description: "Staff of Berkshire Hathaway",
-  },
-  {
-    id: 10,
-    pic: Olatorera,
-    name: "Mary davis",
-    description: "Staff of Berkshire Hathaway",
-  },
-  {
-    id: 11,
-    pic: Olatorera,
-    name: "Mary davis",
-    description: "Staff of Berkshire Hathaway",
-  },
-  {
-    id: 12,
-    pic: Olatorera,
-    name: "Mary davis",
-    description: "Staff of Berkshire Hathaway",
-  },
-  {
-    id: 13,
-    pic: Olatorera,
-    name: "Mary davis",
-    description: "Staff of Berkshire Hathaway",
-  },
-  {
-    id: 14,
-    pic: Olatorera,
-    name: "Mary davis",
-    description: "Staff of Berkshire Hathaway",
-  },
-  {
-    id: 15,
-    pic: Olatorera,
-    name: "Mary davis",
-    description: "Staff of Berkshire Hathaway",
-  },
-  {
-    id: 16,
-    pic: Olatorera,
-    name: "Mary davis",
-    description: "Staff of Berkshire Hathaway",
-  },
-  {
-    id: 17,
-    pic: Olatorera,
-    name: "Mary davis",
-    description: "Staff of Berkshire Hathaway",
-  },
-];
 
 function Investors() {
   const [isSmallScreen, setIsSmallScreen] = useState(false);
@@ -167,6 +59,7 @@ function Investors() {
         text="text-[#717171]"
         contact="text-b"
         logo={Logo}
+        contact1="bg-secondary"
       />
       <Top
         head="Search For Your An Investor"
@@ -193,7 +86,7 @@ function Investors() {
               id="slider"
             >
               {/* Item1 start */}
-              {chunkArray(investor, 9).map((chunk, chunkIndex) => (
+              {chunkArray(investor1, 9).map((chunk, chunkIndex) => (
                 <div className="flex gap-5" key={chunkIndex}>
                   {chunk.map((item, index) => (
                     <div
@@ -336,7 +229,7 @@ function Investors() {
               id="slider"
             >
               {/* Item1 start */}
-              {(isSmallScreen ? chunkArray(investor, 6) : [investor]).map(
+              {(isSmallScreen ? chunkArray(investor2, 6) : [investor2]).map(
                 (chunk, chunkIndex) => (
                   <div className="flex gap-5" key={chunkIndex}>
                     {chunk.map((item, index) => (

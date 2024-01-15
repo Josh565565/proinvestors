@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 // import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { HashLink } from "react-router-hash-link";
 
 import DropdownMenu from "../Landingpage/DropdownMenu";
 
@@ -94,7 +95,7 @@ function ThirdNav() {
             <ul className="flex gap-10 text-[#717171] text-lg items-center">
               <li className="lg:hover:scale-110 lg:hover:font-bold">
                 <Link to="/">
-                  <a>Home</a>
+                  <a href="#">Home</a>
                 </Link>
               </li>
               <li className="lg:hover:scale-110 lg:hover:font-bold">
@@ -104,7 +105,7 @@ function ThirdNav() {
               </li>
               <li className=" flex flex-col items-center relative">
                 <Link to="/owners">
-                  <a className=" text-secondary font-bold text-xl ">
+                  <a className=" text-secondary font-bold text-xl " href="#">
                     Business Owners
                   </a>
                 </Link>
@@ -112,12 +113,16 @@ function ThirdNav() {
               </li>
               <li className="lg:hover:scale-110 lg:hover:font-bold">
                 <Link to="/aboutus">
-                  <a>About Us</a>
+                  <a href="#">About Us</a>
                 </Link>
               </li>
-              <li className="px-5 py-2 bg-secondary text-white rounded-[8px] cursor-pointer hover:scale-105">
-                <a className="text-b font-bold">Contact Us</a>
-              </li>
+              <HashLink to="/aboutus#contactus" smooth>
+                <li className="px-5 py-2 bg-secondary text-white rounded-[8px] cursor-pointer hover:scale-105">
+                  <a className="text-b font-bold" href="#">
+                    Contact Us
+                  </a>
+                </li>
+              </HashLink>
             </ul>
           </div>
         </nav>

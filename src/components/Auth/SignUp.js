@@ -1,6 +1,5 @@
-import React, { useState } from "react";
+import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { Link } from "react-router-dom";
 // Images Import start
 // import Logo from "../Landingpage/images/logo.svg";
 import Logo from "../images/logo2.svg";
@@ -30,7 +29,7 @@ function SignUp(props) {
             />
           </div>
           <div className="flex items-center">
-            <img src={Logo} alt="Logo Image" className="w-[45px]" />
+            <img src={Logo} alt="Logo" className="w-[45px]" />
             <p className=" text-xl text-b lg:text-[1.5rem]">
               <span className="text-[#00FFFF] font-bold ">Pro</span>
               Investors

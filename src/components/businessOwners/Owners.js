@@ -4,7 +4,7 @@ import Top from "./Top";
 import Footer from "../Landingpage/Footer";
 import { Link } from "react-router-dom";
 
-import { item1, item2, tran } from "./data";
+import { item1, item2, tran, item3 } from "./data";
 
 // Imapges import start
 import Logo from "../images/logo2.svg";
@@ -65,6 +65,7 @@ function Owners(props) {
         text="text-[#717171]"
         contact="text-b"
         logo={Logo}
+        contact1="bg-secondary"
       />
       <Top
         head="Investment opportunities on Proinvestor."
@@ -264,7 +265,7 @@ function Owners(props) {
               id="slider3"
             >
               {/* Item1 start */}
-              {(isSmallScreen ? chunkArray(item1, item1.length) : [item1]).map(
+              {(isSmallScreen ? chunkArray(item3, item3.length) : [item3]).map(
                 (chunk, chunkIndex) => (
                   <div className="flex gap-5" key={chunkIndex}>
                     {chunk.map((item, index) => (

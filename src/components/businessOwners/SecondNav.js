@@ -1,10 +1,10 @@
 import React, { useEffect, useRef, useState } from "react";
 // import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { Link, NavLink, useLocation } from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
+import { HashLink } from "react-router-hash-link";
 
 // Images import
-import Logo from "../images/logo2.svg";
 import DropdownMenu from "../Landingpage/DropdownMenu";
 
 const activeLink = "text-secondary font-bold text-xl";
@@ -102,7 +102,7 @@ function SecondNav(props) {
                   isActive ? activeLink : normalLink
                 }
               >
-                <a className="" href="">
+                <a className="" href="#">
                   Home
                 </a>
               </NavLink>
@@ -114,7 +114,7 @@ function SecondNav(props) {
                   location.pathname === "/investors" ? activeLink : normalLink
                 }
               >
-                <a href="">Investors</a>
+                <a href="#">Investors</a>
               </NavLink>
               {location.pathname === "/investors" && (
                 <div className="w-11 h-1.5 rounded bg-secondary absolute top-8"></div>
@@ -127,7 +127,7 @@ function SecondNav(props) {
                   location.pathname === "/owners" ? activeLink : normalLink
                 }
               >
-                <a href="">Business Owners</a>
+                <a href="#">Business Owners</a>
               </NavLink>
               {location.pathname === "/owners" && (
                 <div className="w-11 h-1.5 rounded bg-secondary absolute top-8"></div>
@@ -140,17 +140,21 @@ function SecondNav(props) {
                   location.pathname === "/aboutus" ? activeLink : normalLink
                 }
               >
-                <a href="">About Us</a>
+                <a href="#">About Us</a>
               </NavLink>
               {location.pathname === "/aboutus" && (
                 <div className="w-11 h-1.5 rounded bg-secondary absolute top-8"></div>
               )}
             </li>
-            <li className="px-5 py-2 bg-secondary text-white rounded-[8px] cursor-pointer hover:scale-105">
-              <a className={`${props.contact} font-bold`} href="">
-                Contact Us
-              </a>
-            </li>
+            <HashLink to="/aboutus#contactus" smooth>
+              <li
+                className={`px-5 py-2 ${props.contact1} text-white rounded-[8px] cursor-pointer hover:scale-105`}
+              >
+                <a className={`${props.contact} font-bold`} href="#">
+                  Contact Us
+                </a>
+              </li>
+            </HashLink>
           </ul>
         </div>
       </nav>

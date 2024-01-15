@@ -1,6 +1,8 @@
 import React from "react";
 import SecondNav from "../businessOwners/SecondNav";
 import AboutCard from "./AboutCard";
+import { motion, useAnimation } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 
 import Logo from "../Landingpage/images/logo.svg";
 import AboutPic from "../images/about-pic.svg";
@@ -17,6 +19,39 @@ import Person6 from "../images/about-person6.png";
 import Newsletter from "../Landingpage/Newsletter";
 import Footer from "../Landingpage/Footer";
 
+function AnimatedImage({ src, alt }) {
+  const controls = useAnimation();
+  const [ref, inView] = useInView({
+    triggerOnce: false, // To trigger multiple times
+  });
+
+  React.useEffect(() => {
+    if (inView) {
+      controls.start("visible");
+    } else {
+      controls.start("hidden");
+    }
+  }, [controls, inView]);
+
+  const imageVariants = {
+    hidden: { opacity: 0, scale: 0.5 },
+    visible: { opacity: 1, scale: 1, transition: { duration: 0.6 } },
+    exit: { opacity: 0, scale: 0.5 },
+  };
+
+  return (
+    <motion.img
+      ref={ref}
+      src={src}
+      alt={alt}
+      variants={imageVariants}
+      initial="hidden"
+      animate={controls}
+      exit="exit"
+    />
+  );
+}
+
 function AboutUs() {
   return (
     <div>
@@ -27,6 +62,7 @@ function AboutUs() {
           text="text-white"
           logo={Logo}
           menu="text-[#FFFFFF]"
+          contact1="border-2 border-[#F4F4F4] hover:bg-secondary hover:border-none"
         />
       </div>
       {/* Nav end */}
@@ -45,9 +81,14 @@ function AboutUs() {
               className="lg:hidden min-[370px]:w-[400px] min-[400px]:w-[100%]"
             />
           </div>
-          <h2 className="absolute top-1/2 left-[45%] text-xl md:text-3xl lg:text-[2.25rem] text-white font-bold font-Roboto capitalize">
+          <motion.h2
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.3 }}
+            className="absolute top-1/2 lg:top-[30%] xl:top-1/2 left-[42%] md:left-[45%] text-xl md:text-3xl lg:text-[2.25rem] text-white font-bold font-Roboto capitalize"
+          >
             About Us
-          </h2>
+          </motion.h2>
         </div>
         {/*  */}
         <div className="mt-[40px] lg:mt-[70px] flex flex-col px-1 items-center lg:items-start lg:flex-row justify-center gap-[50px]">
@@ -67,10 +108,13 @@ function AboutUs() {
             </p>
           </div>
           <div>
-            <img
+            <AnimatedImage
               src={AboutPic2}
               alt=""
               className="w-[364px] h-[250px] lg:w-[400px] lg:h-[340px] xl:w-[100%]"
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
             />
           </div>
         </div>
@@ -119,13 +163,38 @@ function AboutUs() {
           </div>
         </div>
         {/* About Card end */}
+        {/* contct Us start */}
+        <section className="mt-20 flex flex-col items-center" id="contactus">
+          <div className="lg:w-[90%]">
+            <p className="text-[#323232] font-bold font-Satoshi text-xl lg:text-[1.5rem]">
+              Contact Us
+            </p>
+            <p className="text-[#444444]  font-Inter text-sm w-[360px] lg:w-[100%] lg:text-xl">
+              If you have any questions about this Privacy Policy, please
+              contact us by visiting this page on our
+            </p>
+            <p className="text-[#444444] font-Inter text-sm lg:text-xl">
+              website:<span>https//www.proinvestors.com</span>
+            </p>
+            <p className="text-[#444444] font-Inter mt-3 text-sm lg:text-xl">
+              Phone (NG): <span>+2347087911466</span>
+            </p>
+            <p className="text-[#444444] font-Inter text-sm lg:text-xl">
+              By e-mail:<span>proinvestors@gmail.com</span>
+            </p>
+          </div>
+        </section>
+        {/* contct Us end */}
         {/*  */}
         <div className="mt-[100px] flex flex-col px-3 items-center lg:items-start lg:flex-row justify-center gap-[50px]">
           <div>
-            <img
+            <AnimatedImage
               src={AboutPic3}
               alt=""
               className="w-[360px] lg:w-[400px] xl:w-[100%]"
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
             />
           </div>
           <div className=" flex flex-col xl:gap-6 px-3">
@@ -161,27 +230,7 @@ function AboutUs() {
             </div>
           </div>
         </div>
-        {/*  */}
-        <div className="mt-20 flex flex-col items-center ">
-          <div className="lg:w-[90%]">
-            <p className="text-[#323232] font-bold font-Satoshi text-xl lg:text-[1.5rem]">
-              Contact Us
-            </p>
-            <p className="text-[#717171]  font-Inter text-sm w-[360px] lg:w-[100%] lg:text-xl">
-              If you have any questions about this Privacy Policy, please
-              contact us by visiting this page on our
-            </p>
-            <p className="text-[#717171] font-Inter text-sm lg:text-xl">
-              website:<span>https//www.proinvestors.com</span>
-            </p>
-            <p className="text-[#717171] font-Inter mt-3 text-sm lg:text-xl">
-              Phone (NG): <span>+2347087911466</span>
-            </p>
-            <p className="text-[#717171] font-Inter text-sm lg:text-xl">
-              By e-mail:<span>proinvestors@gmail.com</span>
-            </p>
-          </div>
-        </div>
+
         {/* Newsletter start */}
         <Newsletter />
         {/* Newsletter end */}
