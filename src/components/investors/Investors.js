@@ -3,7 +3,7 @@ import SecondNav from "../businessOwners/SecondNav";
 import Top from "../businessOwners/Top";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-import { investor1, investor2 } from "./data";
+import { investor1, investor2, Popularinvestor2, investor3 } from "./data";
 
 // Imapges import start
 import Logo from "../images/logo2.svg";
@@ -21,6 +21,18 @@ function Investors() {
     var slider = document.getElementById("slider");
     slider.scrollLeft = slider.scrollLeft + 300;
   };
+  const slideRight1 = () => {
+    var slider = document.getElementById("slider1");
+    slider.scrollLeft = slider.scrollLeft + 300;
+  };
+  const slideRight2 = () => {
+    var slider = document.getElementById("slider2");
+    slider.scrollLeft = slider.scrollLeft + 300;
+  };
+  const slideRight3 = () => {
+    var slider = document.getElementById("slider3");
+    slider.scrollLeft = slider.scrollLeft + 300;
+  };
 
   // Helper function to chunk the array into sets of four items
   const chunkArray = (arr, size) => {
@@ -29,22 +41,22 @@ function Investors() {
     );
   };
 
-  useEffect(() => {
-    const handleResize = () => {
-      setIsSmallScreen(window.innerWidth <= 768); // Update state based on window width
-    };
+  // useEffect(() => {
+  //   const handleResize = () => {
+  //     setIsSmallScreen(window.innerWidth <= 768); // Update state based on window width
+  //   };
 
-    // Event listener for window resize
-    window.addEventListener("resize", handleResize);
+  //   // Event listener for window resize
+  //   window.addEventListener("resize", handleResize);
 
-    // Initial check for screen size when component mounts
-    setIsSmallScreen(window.innerWidth <= 768);
+  //   // Initial check for screen size when component mounts
+  //   setIsSmallScreen(window.innerWidth <= 768);
 
-    // Cleanup function for the event listener
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-  }, []);
+  //   // Cleanup function for the event listener
+  //   return () => {
+  //     window.removeEventListener("resize", handleResize);
+  //   };
+  // }, []);
 
   function truncateWithDots(text, limit) {
     if (text.length > limit) {
@@ -208,8 +220,53 @@ function Investors() {
               <img src={Arrow} alt="" className="" />
             </button>
           </div>
-
           {/* items end */}
+          {/* New Item start  */}
+          <div className="relative">
+            <div
+              className="overflow-x-scroll no-scrollbar scroll scroll-smooth flex flex-wrap  gap-5 pl-5 pr-1"
+              id="slider1"
+            >
+              {/* Item1 start */}
+              {chunkArray(Popularinvestor2, 9).map((chunk, chunkIndex) => (
+                <div className="flex gap-5" key={chunkIndex}>
+                  {chunk.map((item, index) => (
+                    <div
+                      className="mt-3 flex"
+                      key={index}
+                      style={{ flexBasis: "calc(25% - 1rem)" }}
+                    >
+                      <div>
+                        <div className=" w-[156px] h-[199px] rounded-[15px] overflow-hidden lg:w-[260px] lg:h-[330px]">
+                          <img
+                            src={item.pic}
+                            alt={item.name}
+                            className="w-[156px] h-[199px] lg:w-[260px] lg:h-[330px] hover:scale-105 cursor-pointer"
+                          />
+                        </div>
+                        <div className=" bg-white pr-1 py-2 w-[156px]  lg:w-[260px]">
+                          <p className="text-b text-sm font-bold font-Roboto lg:text-lg cursor-pointer">
+                            {item.name}
+                          </p>
+                          <p className="text-[#717171] text-[0.6875rem] font-Inter pt-2 lg:text-sm">
+                            {truncateWithDots(item.description, 24)}
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              ))}
+              {/* Item1 end */}
+            </div>
+            <button
+              onClick={slideRight1}
+              className=" flex absolute right-0 top-0 mt-[100px] items-center justify-center w-[40px] h-[40px] rounded-full bg-[#415993] opacity-90 hover:opacity-100 lg:mt-[150px]"
+            >
+              <img src={Arrow} alt="" className="" />
+            </button>
+          </div>
+          {/* New items end */}
         </div>
         {/* Popular Investors end */}
         {/* Top Investors start */}
@@ -226,7 +283,7 @@ function Investors() {
           <div className="relative">
             <div
               className="overflow-x-scroll no-scrollbar scroll scroll-smooth flex flex-wrap  gap-5 pl-5 pr-1"
-              id="slider"
+              id="slider2"
             >
               {/* Item1 start */}
               {(isSmallScreen ? chunkArray(investor2, 6) : [investor2]).map(
@@ -263,7 +320,7 @@ function Investors() {
               {/* Item1 end */}
             </div>
             <button
-              onClick={slideRight}
+              onClick={slideRight2}
               className=" flex absolute right-0 top-0 mt-[100px] items-center justify-center w-[40px] h-[40px] rounded-full bg-[#415993] opacity-90 hover:opacity-100 lg:mt-[150px]"
             >
               <img src={Arrow} alt="" className="" />
@@ -271,6 +328,52 @@ function Investors() {
           </div>
 
           {/* items end */}
+          {/* New Item start  */}
+          <div className="relative lg:hidden">
+            <div
+              className="overflow-x-scroll no-scrollbar scroll scroll-smooth flex flex-wrap  gap-5 pl-5 pr-1"
+              id="slider3"
+            >
+              {/* Item1 start */}
+              {chunkArray(investor3, 9).map((chunk, chunkIndex) => (
+                <div className="flex gap-5" key={chunkIndex}>
+                  {chunk.map((item, index) => (
+                    <div
+                      className="mt-3 flex"
+                      key={index}
+                      style={{ flexBasis: "calc(25% - 1rem)" }}
+                    >
+                      <div>
+                        <div className=" w-[156px] h-[199px] rounded-[15px] overflow-hidden lg:w-[260px] lg:h-[330px]">
+                          <img
+                            src={item.pic}
+                            alt={item.name}
+                            className="w-[156px] h-[199px] lg:w-[260px] lg:h-[330px] hover:scale-105 cursor-pointer"
+                          />
+                        </div>
+                        <div className=" bg-white pr-1 py-2 w-[156px]  lg:w-[260px]">
+                          <p className="text-b text-sm font-bold font-Roboto lg:text-lg cursor-pointer">
+                            {item.name}
+                          </p>
+                          <p className="text-[#717171] text-[0.6875rem] font-Inter pt-2 lg:text-sm">
+                            {truncateWithDots(item.description, 24)}
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              ))}
+              {/* Item1 end */}
+            </div>
+            <button
+              onClick={slideRight3}
+              className=" flex absolute right-0 top-0 mt-[100px] items-center justify-center w-[40px] h-[40px] rounded-full bg-[#415993] opacity-90 hover:opacity-100 lg:mt-[150px]"
+            >
+              <img src={Arrow} alt="" className="" />
+            </button>
+          </div>
+          {/* New items end */}
         </div>
         {/* Top Investors end */}
       </div>
