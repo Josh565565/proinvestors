@@ -5,8 +5,8 @@ import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 
 import Logo from "../Landingpage/images/logo.svg";
-import AboutPic from "../images/about-pic.svg";
-import AboutBG from "../images/about-bg-mob-2.svg";
+import AboutPic from "../images/about-pic.png";
+import AboutBG from "../images/about-bg-mob-2.png";
 import AboutPic2 from "../images/about-pic-2.jpg";
 import AboutPic3 from "../images/about-pic-3.jpg";
 import Profile from "../images/about-profile.png";
