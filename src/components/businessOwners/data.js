@@ -81,8 +81,11 @@ export const item1 = [
     MinInvestment: "Min.Investment",
     link: "/opportunity",
   },
+];
+
+export const NewItem2 = [
   {
-    id: 6,
+    id: 1,
     name: " Blossom Boutique",
     description: "Bloomingdale Flower Market",
     img: Item32,
@@ -95,7 +98,7 @@ export const item1 = [
     link: "/opportunity",
   },
   {
-    id: 7,
+    id: 2,
     name: " Blossom Boutique",
     description: "Bloomingdale Flower Market",
     img: Item33,
@@ -108,7 +111,7 @@ export const item1 = [
     link: "/opportunity",
   },
   {
-    id: 8,
+    id: 3,
     name: " Blossom Boutique",
     description: "Bloomingdale Flower Market",
     img: Cosmetic,
@@ -121,13 +124,26 @@ export const item1 = [
     link: "/opportunity",
   },
   {
-    id: 9,
+    id: 4,
     name: " Blossom Boutique",
     description: "Bloomingdale Flower Market",
     img: Blossom,
     amountRaised: "$400,500",
     numberOfInvestor: 5,
     minInvest: "$40,000",
+    Raised: "Raised",
+    Investors: "Investors",
+    MinInvestment: "Min.Investment",
+    link: "/opportunity",
+  },
+  {
+    id: 5,
+    name: "Blissful Bakes",
+    description: "Sweet Haven Bakery",
+    img: Bakes,
+    amountRaised: "$80,000",
+    numberOfInvestor: 5,
+    minInvest: "$10,000",
     Raised: "Raised",
     Investors: "Investors",
     MinInvestment: "Min.Investment",
@@ -240,8 +256,11 @@ export const item2 = [
     MinInvestment: "Min.Investment",
     link: "/opportunity",
   },
+];
+
+export const item4 = [
   {
-    id: 9,
+    id: 1,
     name: " Blossom Boutique",
     description: "Bloomingdale Flower Market",
     img: Item34,
@@ -254,7 +273,7 @@ export const item2 = [
     link: "/opportunity",
   },
   {
-    id: 10,
+    id: 2,
     name: " Blossom Boutique",
     description: "Bloomingdale Flower Market",
     img: TechEase,
@@ -267,8 +286,8 @@ export const item2 = [
     link: "/opportunity",
   },
   {
-    id: 11,
-    name: "Education and E-Learning Platforms",
+    id: 3,
+    name: "Education and E-Learning",
     description: "Bloomingdale Flower Market",
     img: Edu,
     amountRaised: "$400,500",
@@ -280,7 +299,7 @@ export const item2 = [
     link: "/opportunity",
   },
   {
-    id: 12,
+    id: 4,
     name: "Real Estates",
     description: " Major cities like Lagos and Abuja",
     img: Estate,
@@ -293,7 +312,7 @@ export const item2 = [
     link: "/opportunity",
   },
   {
-    id: 13,
+    id: 5,
     name: "Agriculture and Agribusiness",
     description: " Ogun, Kano, and Kaduna",
     img: Agric,
@@ -306,7 +325,7 @@ export const item2 = [
     link: "/opportunity",
   },
   {
-    id: 14,
+    id: 6,
     name: "Pet Grooming and Pet Shops",
     description: "Urban areas with pet owners",
     img: Pet,
@@ -319,7 +338,7 @@ export const item2 = [
     link: "/opportunity",
   },
   {
-    id: 15,
+    id: 7,
     name: "Food and Beverage Businesses",
     description: "Urban areas, Nigeria",
     img: Item31,
@@ -332,7 +351,7 @@ export const item2 = [
     link: "/opportunity",
   },
   {
-    id: 16,
+    id: 8,
     name: "Art and Craft Stores",
     description: "Cultural Hub, Abuja",
     img: Item32,

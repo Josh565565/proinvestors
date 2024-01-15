@@ -4,7 +4,7 @@ import Top from "./Top";
 import Footer from "../Landingpage/Footer";
 import { Link } from "react-router-dom";
 
-import { item1, item2, tran, item3 } from "./data";
+import { item1, item2, tran, item3, NewItem2, item4 } from "./data";
 
 // Imapges import start
 import Logo from "../images/logo2.svg";
@@ -25,6 +25,14 @@ function Owners(props) {
   };
   const slideRight3 = () => {
     var slider = document.getElementById("slider3");
+    slider.scrollLeft = slider.scrollLeft + 300;
+  };
+  const slideRight4 = () => {
+    var slider = document.getElementById("slider4");
+    slider.scrollLeft = slider.scrollLeft + 300;
+  };
+  const slideRight5 = () => {
+    var slider = document.getElementById("slider5");
     slider.scrollLeft = slider.scrollLeft + 300;
   };
 
@@ -161,6 +169,82 @@ function Owners(props) {
           </div>
 
           {/* items end */}
+          {/* New Mobile Item start  */}
+          <div className="relative lg:hidden">
+            <div
+              className="overflow-x-scroll no-scrollbar scroll scroll-smooth flex flex-wrap  gap-5 pl-5 pr-1"
+              id="slider4"
+            >
+              {/* Item1 start */}
+              {(isSmallScreen ? chunkArray(NewItem2, 6) : [NewItem2]).map(
+                (chunk, chunkIndex) => (
+                  <div className="flex gap-5" key={chunkIndex}>
+                    {chunk.map((item, index) => (
+                      <div
+                        className="mt-3"
+                        key={index}
+                        style={{ flexBasis: "calc(25% - 1rem)" }}
+                      >
+                        <div className="w-[233px] h-[150px] rounded-t-xl overflow-hidden lg:w-[400px] lg:h-[197px]">
+                          <Link
+                            to={item.link}
+                            onClick={() => handleClick(item.img)}
+                          >
+                            <img
+                              src={item.img}
+                              alt={item.name}
+                              className="lg:w-[400px] lg:h-[197px]"
+                            />
+                          </Link>
+                        </div>
+                        <div className="px-2 py-2 bg-primary w-[233px] h-[96px] rounded-b-xl lg:w-[400px] lg:h-[145px]">
+                          <p className="text-[#F8F8F8] text-sm font-bold font-Roboto lg:text-xl">
+                            {item.name}
+                          </p>
+                          <p className="text-[#D9D9D9] text-xs font-Inter pt-2 lg:text-sm">
+                            {item.description}
+                          </p>
+                          <div className="pt-2">
+                            <div className="flex justify-between pr-[25px]">
+                              <p className="text-[#F8F8F8] text-[0.75rem] font-bold font-Roboto lg:text-xl">
+                                {item.amountRaised}
+                              </p>
+                              <p className="text-[#F8F8F8] text-[0.75rem] font-semibold font-Roboto mr-[50px] lg:text-xl lg:mr-[72px]">
+                                {item.numberOfInvestor}
+                              </p>
+                              <p className="text-[#F8F8F8] text-[0.75rem] font-semibold font-Roboto lg:text-xl lg:pr-5">
+                                {item.minInvest}
+                              </p>
+                            </div>
+                            <div className="flex justify-between">
+                              <p className="text-[#D9D9D9] text-[0.625rem] font-Inter lg:text-base">
+                                {item.Raised}
+                              </p>
+                              <p className="text-[#D9D9D9] text-[0.625rem] font-Inter lg:text-base">
+                                {item.Investors}
+                              </p>
+                              <p className="text-[#D9D9D9] text-[0.625rem] font-Inter lg:text-base">
+                                {item.MinInvestment}
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                )
+              )}
+              {/* Item1 end */}
+            </div>
+            <button
+              onClick={slideRight4}
+              className=" flex absolute right-0 top-0 mt-[100px] items-center justify-center w-[40px] h-[40px] rounded-full bg-[#415993] opacity-90 hover:opacity-100 lg:mt-[150px]"
+            >
+              <img src={Arrow} alt="" className="" />
+            </button>
+          </div>
+
+          {/* New Mobile Item start */}
         </div>
         {/* Top Business start */}
         <div className="mt-10">
@@ -246,6 +330,80 @@ function Owners(props) {
           </div>
 
           {/* items end */}
+          {/* Top 2 Item start  */}
+          <div className="relative">
+            <div
+              className="overflow-x-scroll no-scrollbar scroll scroll-smooth flex flex-wrap  gap-5 pl-5 pr-1"
+              id="slider5"
+            >
+              {/* Item1 start */}
+              {chunkArray(item4, 10).map((chunk, chunkIndex) => (
+                <div className="flex gap-5" key={chunkIndex}>
+                  {chunk.map((item, index) => (
+                    <div
+                      className="mt-3"
+                      key={index}
+                      style={{ flexBasis: "calc(25% - 1rem)" }}
+                    >
+                      <div className="w-[233px] h-[150px] rounded-t-xl overflow-hidden lg:w-[400px] lg:h-[197px]">
+                        <Link
+                          to={item.link}
+                          onClick={() => handleClick(item.img)}
+                        >
+                          <img
+                            src={item.img}
+                            alt=""
+                            className="lg:w-[400px] lg:h-[197px]"
+                          />
+                        </Link>
+                      </div>
+                      <div className="px-2 py-2 bg-primary w-[233px] h-[96px] rounded-b-xl lg:w-[400px] lg:h-[145px]">
+                        <p className="text-[#F8F8F8] text-sm font-bold font-Roboto lg:text-xl">
+                          {item.name}
+                        </p>
+                        <p className="text-[#D9D9D9] text-xs font-Inter pt-2 lg:text-sm">
+                          {item.description}
+                        </p>
+                        <div className="pt-2">
+                          <div className="flex justify-between pr-[25px]">
+                            <p className="text-[#F8F8F8] text-[0.75rem] font-bold font-Roboto lg:text-xl">
+                              {item.amountRaised}
+                            </p>
+                            <p className="text-[#F8F8F8] text-[0.75rem] font-semibold font-Roboto mr-[50px] lg:text-xl lg:mr-[72px]">
+                              {item.numberOfInvestor}
+                            </p>
+                            <p className="text-[#F8F8F8] text-[0.75rem] font-semibold font-Roboto lg:text-xl lg:pr-5">
+                              {item.minInvest}
+                            </p>
+                          </div>
+                          <div className="flex justify-between">
+                            <p className="text-[#D9D9D9] text-[0.625rem] font-Inter lg:text-base">
+                              {item.Raised}
+                            </p>
+                            <p className="text-[#D9D9D9] text-[0.625rem] font-Inter lg:text-base">
+                              {item.Investors}
+                            </p>
+                            <p className="text-[#D9D9D9] text-[0.625rem] font-Inter lg:text-base">
+                              {item.MinInvestment}
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              ))}
+              {/* Item1 end */}
+            </div>
+            <button
+              onClick={slideRight5}
+              className=" flex absolute right-0 top-0 mt-[100px] items-center justify-center w-[40px] h-[40px] rounded-full bg-[#415993] opacity-90 hover:opacity-100 lg:mt-[150px]"
+            >
+              <img src={Arrow} alt="" className="" />
+            </button>
+          </div>
+
+          {/* Top 2 items end */}
         </div>
         {/* Top Business end */}
         {/* Funded Business start */}
@@ -354,7 +512,7 @@ function Owners(props) {
           >
             <div className="flex items-center gap-2 lg:gap-7">
               <div className="h-[40px] w-[40px] rounded-full flex items-center justify-center bg-[#F2F2F2] lg:h-[60px] lg:w-[60px]">
-                <img src={Tran} alt="" className="w-[15px] lg:w-[24px]" />
+                <img src={Tran} alt="" className="w-[15px] lg:w-[20px]" />
               </div>
               <div className="lg:flex lg:gap-1 w-[110px] lg:w-[230px]">
                 <p className="text-[#F8F8F8] text-xs font-medium font-Inter lg:text-lg">
