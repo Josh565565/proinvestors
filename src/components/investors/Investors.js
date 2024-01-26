@@ -237,7 +237,7 @@ function Investors() {
                               <h4 className="text-[0.8125rem] text-[#F2F2F2] font-bold font-Roboto text-center lg:text-lg">
                                 {selectedInvestor.name}
                               </h4>
-                              <p className="text-[0,6875rem] text-[#C1C1C1] font-medium text-center lg:text-sm w-[200px]">
+                              <p className="text-[0.6875rem] text-[#C1C1C1] font-medium text-center lg:text-sm w-[150px] lg:w-[200px]">
                                 {selectedInvestor.description}
                               </p>
                             </div>
@@ -300,7 +300,7 @@ function Investors() {
                             </div>
                             <div className="flex gap-5 items-center pt-1">
                               <img src={Right} alt="" />
-                              <p className="text-[0,6875rem] text-[#F2F2F2] border rounded-full px-1 cursor-pointer lg:text-base">
+                              <p className="text-[0.6875rem] text-[#F2F2F2] border rounded-full px-1 cursor-pointer lg:text-base">
                                 Chat Now
                               </p>
                             </div>
@@ -376,7 +376,7 @@ function Investors() {
                               <h4 className="text-[0.8125rem] text-[#F2F2F2] font-bold font-Roboto text-center lg:text-lg">
                                 {selectedInvestor2.name}
                               </h4>
-                              <p className="text-[0,6875rem] text-[#C1C1C1] font-medium text-center lg:text-sm w-[200px]">
+                              <p className="text-[0.6875rem] text-[#C1C1C1] font-medium text-center lg:text-sm w-[150px] lg:w-[200px]">
                                 {selectedInvestor2.description}
                               </p>
                             </div>
@@ -439,7 +439,7 @@ function Investors() {
                             </div>
                             <div className="flex gap-5 items-center pt-1">
                               <img src={Right} alt="" />
-                              <p className="text-[0,6875rem] text-[#F2F2F2] border rounded-full px-1 cursor-pointer lg:text-base">
+                              <p className="text-[0.6875rem] text-[#F2F2F2] border rounded-full px-1 cursor-pointer lg:text-base">
                                 Chat Now
                               </p>
                             </div>
@@ -528,7 +528,7 @@ function Investors() {
                                 <h4 className="text-[0.8125rem] text-[#F2F2F2] font-bold font-Roboto text-center lg:text-lg">
                                   {selectedInvestor3.name}
                                 </h4>
-                                <p className="text-[0,6875rem] text-[#C1C1C1] font-medium text-center lg:text-sm w-[200px]">
+                                <p className="text-[0.6875rem] text-[#C1C1C1] font-medium text-center lg:text-sm w-[150px] lg:w-[200px]">
                                   {selectedInvestor3.description}
                                 </p>
                               </div>
@@ -591,7 +591,7 @@ function Investors() {
                               </div>
                               <div className="flex gap-5 items-center pt-1">
                                 <img src={Right} alt="" />
-                                <p className="text-[0,6875rem] text-[#F2F2F2] border rounded-full px-1 cursor-pointer lg:text-base">
+                                <p className="text-[0.6875rem] text-[#F2F2F2] border rounded-full px-1 cursor-pointer lg:text-base">
                                   Chat Now
                                 </p>
                               </div>
