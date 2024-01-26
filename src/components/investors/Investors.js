@@ -33,6 +33,13 @@ function Investors() {
     top: 0,
   });
   const [selectedInvestor3, setSelectedInvestor3] = useState(null);
+  // 4rd start
+  const [selectedInvestorIndex4, setSelectedInvestorIndex4] = useState(null);
+  const [investorPosition4, setInvestorPosition4] = useState({
+    left: 0,
+    top: 0,
+  });
+  const [selectedInvestor4, setSelectedInvestor4] = useState(null);
 
   const selectInvestor = (index, position, investor) => {
     setSelectedInvestorIndex(index);
@@ -102,11 +109,34 @@ function Investors() {
       setSelectedInvestorDetails3(index3);
     }
   };
-
   // Function to set selected investor3 details
   const setSelectedInvestorDetails3 = (index3) => {
     const selectedInvestorDetails3 = investor2[index3];
     setSelectedInvestor3(selectedInvestorDetails3);
+  };
+  // 4rd srart
+  const selectInvestor4 = (index4, position4, investor4) => {
+    setSelectedInvestorIndex4(index4);
+    setInvestorPosition4(position4);
+    setSelectedInvestor4(investor4);
+    setSelectedInvestorDetails4(index4);
+
+    // If the clicked investor is already selected, reset the states to hide the details
+    if (selectedInvestorIndex4 === index4) {
+      setSelectedInvestorIndex4(null);
+      setInvestorPosition4({ left: 0, top: 0 });
+      setSelectedInvestor4(null);
+    } else {
+      setSelectedInvestorIndex4(index4);
+      setInvestorPosition4(position4);
+      setSelectedInvestor4(investor4);
+      setSelectedInvestorDetails4(index4);
+    }
+  };
+  // Function to set selected investor4 details
+  const setSelectedInvestorDetails4 = (index4) => {
+    const selectedInvestorDetails4 = investor3[index4];
+    setSelectedInvestor4(selectedInvestorDetails4);
   };
 
   const slideRight = () => {
@@ -635,6 +665,12 @@ function Investors() {
                           <img
                             src={item.pic}
                             alt={item.name}
+                            onClick={(event) =>
+                              selectInvestor4(
+                                index,
+                                event.target.getBoundingClientRect()
+                              )
+                            }
                             className="w-[156px] h-[199px] lg:w-[260px] lg:h-[330px] hover:scale-105 cursor-pointer"
                           />
                         </div>
@@ -647,6 +683,93 @@ function Investors() {
                           </p>
                         </div>
                       </div>
+                      {/*  */}
+                      {/* Investor4 details start */}
+                      {selectedInvestorIndex4 === index && (
+                        <div className="bg-[#415993] w-[333px] h-[194px] ml-5 flex justify-between gap-1 items-center py-[15px]  rounded-[5px] lg:w-[550px] lg:h-[330px] lg:px-10 lg:pr-20">
+                          <div className="flex flex-col items-center">
+                            <div className="w-[60px] h-[60px] rounded-full lg:w-[110px] lg:h-[110px]">
+                              <img
+                                src={selectedInvestor4.pic}
+                                alt={selectedInvestor4.name}
+                                className="w-[60px] h-[60px] rounded-full lg:w-[110px] lg:h-[110px]"
+                              />
+                            </div>
+                            <div>
+                              <h4 className="text-[0.8125rem] text-[#F2F2F2] font-bold font-Roboto text-center lg:text-lg">
+                                {selectedInvestor4.name}
+                              </h4>
+                              <p className="text-[0.6875rem] text-[#C1C1C1] font-medium text-center lg:text-sm w-[150px] lg:w-[200px]">
+                                {selectedInvestor4.description}
+                              </p>
+                            </div>
+                            <div className="flex gap-5 mt-7">
+                              <FontAwesomeIcon
+                                icon="fa-brands fa-linkedin"
+                                className="bg-[#415993] text-white h-[26px]"
+                              />
+                              <FontAwesomeIcon
+                                icon="fa-solid fa-user"
+                                className="text-[#DADBD8] h-[26px]"
+                              />
+                              <FontAwesomeIcon
+                                icon="fa-brands fa-square-whatsapp"
+                                className="bg-white text-[#415993] h-[26px]"
+                              />
+                            </div>
+                          </div>
+                          {/* Line start */}
+                          <div>
+                            <img
+                              src={Line}
+                              alt=""
+                              className="hidden lg:block"
+                            />
+                            <img src={Line2} alt="" className=" lg:hidden" />
+                          </div>
+                          {/* Line end */}
+                          <div>
+                            <div>
+                              <h3 className="text-sm text-[#F2F2F2] font-medium font-Roboto lg:text-base">
+                                Investment Products
+                              </h3>
+                              <p className="text-[0.625rem] text-[#D9D9D9] font-Inter lg:text-sm">
+                                Stocks:
+                              </p>
+                              <p className="text-[0.625rem] text-[#D9D9D9] font-Inter lg:text-sm">
+                                Exchange-Traded Funds (ETFs):
+                              </p>
+                            </div>
+                            <div>
+                              <h3 className="text-sm text-[#F2F2F2] font-medium font-Roboto pt-1 lg:text-base">
+                                Speciality
+                              </h3>
+                              <p className="text-[0.625rem] text-[#D9D9D9] font-Inter lg:text-sm">
+                                Trading
+                              </p>
+                              <p className="text-[0.625rem] text-[#D9D9D9] font-Inter lg:text-sm">
+                                Online Advertisement
+                              </p>
+                            </div>
+                            <div>
+                              <h3 className="text-sm text-[#F2F2F2] font-medium font-Roboto pt-1 lg:text-base">
+                                Pantnerships
+                              </h3>
+                              <p className=" text-[0.625rem] text-[#D9D9D9] font-Inter lg:text-sm lg:w-[175px]">
+                                google ads, LinkedIn ads, Twitter ads, Amazon
+                                Ads.
+                              </p>
+                            </div>
+                            <div className="flex gap-5 items-center pt-1">
+                              <img src={Right} alt="" />
+                              <p className="text-[0.6875rem] text-[#F2F2F2] border rounded-full px-1 cursor-pointer lg:text-base">
+                                Chat Now
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                      )}
+                      {/* Investor4 details end */}
                     </div>
                   ))}
                 </div>
